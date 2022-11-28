@@ -9,38 +9,28 @@
     <a class="main-header__logo">
       <img src="img/logos/logo.svg" width="185" height="96" alt="Логотип 'Седона'.">
     </a>
-    <nav class="main-nav">
+    <div class="main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Меню</span>
       </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--current">
-            <a href="index.html">
-              Главная
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a href="catalog.html">
-              Фото и видео
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a href="form.html">
-              Форма отзыва
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a href="https://htmlacademy.ru/">
-              HTMLACADEMY
-            </a>
-          </li>
-        </ul>
-      </div>
+      <nav class="main-nav__wrapper">
+        <a class="main-nav__item main-nav__item--current" href="index.html">
+          Главная
+        </a>
+        <a class="main-nav__item" href="catalog.html">
+          Фото и видео
+        </a>
+        <a class="main-nav__item" href="form.html">
+          Форма отзыва
+        </a>
+        <a class="main-nav__item" href="https://htmlacademy.ru/">
+          HTMLACADEMY
+        </a>
+      </nav>
       <button class="menu-button" type="button">
         <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.9 0H0v4h22.9V0ZM22.9 9H0v4h22.9V9ZM22.9 18H0v4h22.9v-4Z" fill="#81B3D2"/></svg>
       </button>
-    </nav>
+    </div>
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Поиск гостиниц в Седоне</h1>
@@ -54,120 +44,107 @@
         </p>
       </section>
     </div>
-    <div class="features-wrapper">
-      <section class="features">
-          <h3 class="features__features-title">
-            НАСТОЯЩИЙ ГОРОДОК
+    <section class="features">
+        <h3 class="features__features-title">
+          НАСТОЯЩИЙ ГОРОДОК
+        </h3>
+        <p class="features__features-divider">
+          <!--Далее будет сделан через псевдоэлемент Или потом будет выводится, как номер пункта в списке, если переделать features в список-->
+          — №1 —
+        </p>
+        <p class="features__features-title">
+          СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
+        </p>
+      <img src="img/photo/sedona-town-mobile.jpg" alt="Фото Города." width="320" height="260">
+    </section>
+    <section class="advantages">
+      <ul class="advantages__list advantages__list--no-number">
+        <li class="advantages__item">
+          <h3 class="advantages__title">
+            Жилье
           </h3>
-          <p class="features__features-divider">
-            <!--Далее будет сделан через псевдоэлемент Или потом будет выводится, как номер пункта в списке, если переделать features в список-->
-            — №1 —
+          <p class="advantages__description">
+            Рекомендуем пожить в настоящем мотеле, все как в кино!
           </p>
-          <p class="features__features-title">
-            СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
-          </p>
-        <img src="img/photo/sedona-town-mobile.jpg" alt="Фото Города." width="320" height="260">
-      </section>
-    </div>
-    <div class="advantages-wrapper">
-      <section class="advantages">
-        <ul class="advantages__list advantages__list--no-number">
-          <li class="advantages__item">
-            <h3 class="advantages__title">
-              Жилье
-            </h3>
-            <p class="advantages__description">
-              Рекомендуем пожить в настоящем мотеле, все как в кино!
-            </p>
-          </li>
-          <li class="advantages__item">
-            <h3 class="advantages__title">
-              ЕДА
-            </h3>
-            <p class="advantages__description">
-              Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!
-            </p>
-          </li>
-          <li class="advantages__item">
-            <h3 class="advantages__title">
-              СУВЕНИРЫ
-            </h3>
-            <p class="advantages__description">
-              Не только китайского, но и местного производства!
-            </p>
-          </li>
-        </ul>
-      </section>
-    </div>
-    <div class="features-wrapper">
-      <section class="features">
-          <h3 class="features__features-title">
-            Там есть Мост дьявола
+        </li>
+        <li class="advantages__item">
+          <h3 class="advantages__title">
+            ЕДА
           </h3>
-          <p class="features__features-divider">
+          <p class="advantages__description">
+            Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!
+          </p>
+        </li>
+        <li class="advantages__item">
+          <h3 class="advantages__title">
+            СУВЕНИРЫ
+          </h3>
+          <p class="advantages__description">
+            Не только китайского, но и местного производства!
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section class="features">
+        <h3 class="features__features-title">
+          Там есть Мост дьявола
+        </h3>
+        <p class="features__features-divider">
+          <!--Далее будет сделан через псевдоэлемент Или потом будет выводится, как номер пункта в списке, если переделать features в список-->
+          — №2 —
+        </p>
+        <p class="features__features-title">
+          Да, по нему можно пройти! Если вы осмелитесь, конечно
+        </p>
+      <img src="img/photo/devil-gridge-mobile.jpg" alt="Фото - 'Мост дьявола'." width="320" height="260">
+    </section>
+    <section class="advantages">
+      <ol class="advantages__list">
+        <li class="advantages__item">
+          <h2 class="advantages__title">
+            НЕБОЛЬШАЯ ПЛОЩАДЬ
+          </h2>
+          <p class="advantages__advantages-divider">
             <!--Далее будет сделан через псевдоэлемент Или потом будет выводится, как номер пункта в списке, если переделать features в список-->
-            — №2 —
+            — №3 —
           </p>
-          <p class="features__features-title">
-            Да, по нему можно пройти! Если вы осмелитесь, конечно
+          <p class="advantages__description">
+            ВСЕ интересные места находятся очень близко
           </p>
-        </div>
-        <img src="img/photo/devil-gridge-mobile.jpg" alt="Фото - 'Мост дьявола'." width="320" height="260">
-      </section>
-    </div>
-    <div class="advantages-wrapper">
-      <section class="advantages">
-        <ol class="advantages__list">
-          <li class="advantages__item">
-            <h2 class="advantages__title">
-              НЕБОЛЬШАЯ ПЛОЩАДЬ
-            </h2>
-            <p class="advantages__advantages-divider">
-              <!--Далее будет сделан через псевдоэлемент Или потом будет выводится, как номер пункта в списке, если переделать features в список-->
-              — №3 —
-            </p>
-            <p class="advantages__description">
-              ВСЕ интересные места находятся очень близко
-            </p>
-          </li>
-          <li class="advantages__item">
-            <h2 class="advantages__title">
-              КРАСИВАЯ ДОРОГА
-            </h2>
-            <p class="advantages__advantages-divider">
-              <!--Далее будет сделан через псевдоэлемент Или потом будет выводится, как номер пункта в списке, если переделать features в список-->
-              — №4 —
-            </p>
-            <p class="advantages__description">
-              ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!
-            </p>
-          </li>
-          <li class="advantages__item">
-            <h2 class="advantages__title">
-              МАЛО ТУРИСТОВ
-            </h2>
-            <p class="advantages__advantages-divider">
-              <!--Далее будет сделан через псевдоэлемент Или потом будет выводится, как номер пункта в списке, если переделать features в список-->
-              — №5 —
-            </p>
-            <p class="advantages__description">
-              Большинство едет в гранд каньони толпится там
-            </p>
-          </li>
-        </ol>
-      </section>
-    </div>
-    <div class="action-form-wrapper">
-      <section class="action-form">
-        <h2 class="action-form__title">Заинтересовались?</h2>
-        <p class="action-form__description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="action-form__link button button-serch" href="#">Поиск гостиницы в седоне</a>
-      </section>
-    </div>
-    <div class="search-map-wrapper">
-      <div class="search-map">
-        <img src="img/photo/map-mobile.jpg" alt="Карта." width="320" height="350">
-      </div>
+        </li>
+        <li class="advantages__item">
+          <h2 class="advantages__title">
+            КРАСИВАЯ ДОРОГА
+          </h2>
+          <p class="advantages__advantages-divider">
+            <!--Далее будет сделан через псевдоэлемент Или потом будет выводится, как номер пункта в списке, если переделать features в список-->
+            — №4 —
+          </p>
+          <p class="advantages__description">
+            ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!
+          </p>
+        </li>
+        <li class="advantages__item">
+          <h2 class="advantages__title">
+            МАЛО ТУРИСТОВ
+          </h2>
+          <p class="advantages__advantages-divider">
+            <!--Далее будет сделан через псевдоэлемент Или потом будет выводится, как номер пункта в списке, если переделать features в список-->
+            — №5 —
+          </p>
+          <p class="advantages__description">
+            Большинство едет в гранд каньони толпится там
+          </p>
+        </li>
+      </ol>
+    </section>
+    <section class="action-form">
+      <h2 class="action-form__title">Заинтересовались?</h2>
+      <p class="action-form__description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <a class="action-form__link button button-serch" href="#">Поиск гостиницы в седоне</a>
+    </section>
+    <div class="search-map">
+      <img src="img/photo/map-mobile.jpg" alt="Карта." width="320" height="350">
     </div>
   </main>
   <footer class="main-footer">

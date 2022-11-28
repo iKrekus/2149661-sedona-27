@@ -9,47 +9,33 @@
     <a class="main-header__logo">
       <img src="img/logos/logo.svg" width="185" height="96" alt="Логотип 'Седона'.">
     </a>
-    <nav class="main-nav">
+    <div class="main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Меню</span>
       </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="index.html">
-              Главная
-            </a>
-          </li>
-          <li class="main-nav__item main-nav__item--current">
-            <a href="catalog.html">
-              Фото и видео
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a href="form.html">
-              Форма отзыва
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a href="https://htmlacademy.ru/">
-              HTMLACADEMY
-            </a>
-          </li>
-        </ul>
-        <button class="menu-button" type="button">
-          <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.9 0H0v4h22.9V0ZM22.9 9H0v4h22.9V9ZM22.9 18H0v4h22.9v-4Z" fill="#81B3D2"/></svg>
-        </button>
-      </div>
-    </nav>
+      <nav class="main-nav__wrapper">
+        <a class="main-nav__item" href="index.html">
+          Главная
+        </a>
+        <a class="main-nav__item main-nav__item--current" href="catalog.html">
+          Фото и видео
+        </a>
+        <a class="main-nav__item" href="form.html">
+          Форма отзыва
+        </a>
+        <a class="main-nav__item" href="https://htmlacademy.ru/">
+          HTMLACADEMY
+        </a>
+      </nav>
+      <button class="menu-button" type="button">
+        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.9 0H0v4h22.9V0ZM22.9 9H0v4h22.9V9ZM22.9 18H0v4h22.9v-4Z" fill="#81B3D2"/></svg>
+      </button>
+    </div>
   </header>
   <main class="main-container">
-    <div class="hero-wrapper">
-      <section class="hero-block">
-        <h1 class="visually-hidden">Каталог</h1>
-      </section>
-    </div>
-    <div class="single-page-head-wrapper container">
-        <section class="page-head-content">
+    <h1 class="visually-hidden">Каталог</h1>
+    <div class="single-page-head-wrapper">
+        <section class="page-head-content container">
           <h2 class="page-head-content__title">
             Фото и видео
           </h2>
@@ -58,8 +44,7 @@
           </p>
         </section>
     </div>
-    <div class="catalog-item-wrapper container">
-      <section class="catalog-item">
+      <section class="catalog-item container">
         <img class="catalog-item__image" src="img/photo/photo-1-mobile.jpg" alt="Фото: Неродные просторы." width="280" height="280">
         <h3 class="catalog-item__title">
           Неродные просторы
@@ -73,12 +58,10 @@
               <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity=".3" d="m13 3.8-.7 3-.6 2.6h9.1v2.2l-3 7.3H8.4V8.4L13 3.8Zm.8-3.8L6.9 7c-.4.2-.6.8-.6 1.4v10.5c0 1.2 1 2.1 2 2.1h9.5a2 2 0 0 0 1.9-1.3l3-7.4c.2-.2.2-.5.2-.8v-2h.1c0-1.2-1-2.2-2-2.2h-6.7l1-4.8v-.3c0-.4-.1-.8-.4-1.2l-1.1-1ZM4.2 8.4H0V21h4.2V8.4Z" fill="#000"/></svg>
             </a>
           </div>
-          <p class="likes-counter__count">1350</p>
+          1350
         </div>
       </section>
-    </div>
-    <div class="catalog-item-wrapper container">
-      <section class="catalog-item">
+      <section class="catalog-item container">
         <img class="catalog-item__image" src="img/photo/photo-2-mobile.jpg" alt="Фото: Местная растительность." width="280" height="280">
         <h3 class="catalog-item__title">
           Местная растительность
@@ -92,11 +75,9 @@
               <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity=".3" d="m13 3.8-.7 3-.6 2.6h9.1v2.2l-3 7.3H8.4V8.4L13 3.8Zm.8-3.8L6.9 7c-.4.2-.6.8-.6 1.4v10.5c0 1.2 1 2.1 2 2.1h9.5a2 2 0 0 0 1.9-1.3l3-7.4c.2-.2.2-.5.2-.8v-2h.1c0-1.2-1-2.2-2-2.2h-6.7l1-4.8v-.3c0-.4-.1-.8-.4-1.2l-1.1-1ZM4.2 8.4H0V21h4.2V8.4Z" fill="#000"/></svg>
             </a>
           </div>
-          <p class="likes-counter__count">143</p>
+          143
         </div>
       </section>
-    </div>
-    <div class="catalog-item-wrapper container">
       <section class="catalog-item">
         <img class="catalog-item__image" src="img/photo/photo-3-mobile.jpg" alt="Фото: Дорога на север." width="280" height="280">
         <h3 class="catalog-item__title">
@@ -111,12 +92,10 @@
               <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity=".3" d="m13 3.8-.7 3-.6 2.6h9.1v2.2l-3 7.3H8.4V8.4L13 3.8Zm.8-3.8L6.9 7c-.4.2-.6.8-.6 1.4v10.5c0 1.2 1 2.1 2 2.1h9.5a2 2 0 0 0 1.9-1.3l3-7.4c.2-.2.2-.5.2-.8v-2h.1c0-1.2-1-2.2-2-2.2h-6.7l1-4.8v-.3c0-.4-.1-.8-.4-1.2l-1.1-1ZM4.2 8.4H0V21h4.2V8.4Z" fill="#000"/></svg>
             </a>
           </div>
-          <p class="likes-counter__count">96</p>
+          96
         </div>
       </section>
-    </div>
-    <div class="catalog-item-wrapper container">
-      <section class="catalog-item">
+      <section class="catalog-item container">
         <img class="catalog-item__image" src="img/photo/photo-4-mobile.jpg" alt="Фото: Мост дьявола." width="280" height="280">
         <h3 class="catalog-item__title">
           Мост дьявола
@@ -130,12 +109,10 @@
               <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity=".3" d="m13 3.8-.7 3-.6 2.6h9.1v2.2l-3 7.3H8.4V8.4L13 3.8Zm.8-3.8L6.9 7c-.4.2-.6.8-.6 1.4v10.5c0 1.2 1 2.1 2 2.1h9.5a2 2 0 0 0 1.9-1.3l3-7.4c.2-.2.2-.5.2-.8v-2h.1c0-1.2-1-2.2-2-2.2h-6.7l1-4.8v-.3c0-.4-.1-.8-.4-1.2l-1.1-1ZM4.2 8.4H0V21h4.2V8.4Z" fill="#000"/></svg>
             </a>
           </div>
-          <p class="likes-counter__count">254</p>
+          254
         </div>
       </section>
-    </div>
-    <div class="single-page-head-wrapper">
-      <section class="page-head-content">
+      <section class="page-head-content container">
         <h2 class="page-head-content__title">
           Все еще сомневаетесь?
         </h2>
@@ -146,7 +123,6 @@
           <img class="video-wrapper__image" src="img/photo/video-preview-mobile.jpg" alt="видеопрезентация." width="280" height="177">
         </div>
       </section>
-  </div>
   </main>
 
   <footer class="main-footer">
