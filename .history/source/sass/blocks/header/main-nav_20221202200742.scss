@@ -1,0 +1,10 @@
+.main-nav {
+  width: 100%;
+  min-height: 56px;
+}
+
+.main-nav__wrapper {
+  &--hidden {
+    display: none;
+  }
+}

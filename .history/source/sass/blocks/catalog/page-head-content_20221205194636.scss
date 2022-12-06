@@ -1,0 +1,21 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.page-head-content {
+  padding: 30px 18px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 37px;
+}
+
+.page-head-content__title {
+  @include mixin.font-title-mob;
+  color: var.$primary-text-color;
+  text-align: center;
+}
+
+.page-head-content__description {
+  @include mixin.font-description-mob;
+  color: var.$primary-text-color;
+  text-align: center;
+}

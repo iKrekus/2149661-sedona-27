@@ -1,0 +1,24 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.main-footer {
+  padding-top: 45px 18px 22px;
+}
+
+.main-footer__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var.$primary-text-color;
+}
+
+.main-footer__link {
+  padding: 12px;
+  background-color: var.$button-primary-background;
+
+  &--social {
+    color: var.$light-text-color;
+  }
+}

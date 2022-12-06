@@ -1,0 +1,14 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.single-page-head-wrapper {
+  position: relative;
+
+  &::before {
+    content: " ";
+    display: block;
+    min-height: 158px;
+    width: 100%;
+    background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/sinle-page-sedona.svg") no-repeat center 51px, #d3e4ee url("../img/bacgrounds/background-hero-desktop.jpg") no-repeat center top 80%
+  }
+}

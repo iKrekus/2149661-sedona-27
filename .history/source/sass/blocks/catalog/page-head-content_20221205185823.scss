@@ -1,0 +1,7 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+
+.page-head-content__title {
+  @include mixin.font-title-mob;
+}

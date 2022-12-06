@@ -1,0 +1,83 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.main-nav {
+  width: 100%;
+  min-height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-nav__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  right: 20px;
+  top: 17px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: #81b3d2;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &--close {
+    color: #ffffff;
+    z-index: 2;
+    cursor: pointer;
+    display: none;
+  }
+}
+
+.main-nav__item {
+  @include mixin.font-title-mob;
+  text-align: center;
+  padding: 17px 20px 12px;
+  box-sizing: border-box;
+  color: var.$light-text-color;
+  border-bottom: 1px solid #678fa8;
+  background-color: #80b2d1;
+  z-index: 2;
+
+  &:hover {
+    background-color: var.$button-primary-background-hover;
+  }
+
+  &:active {
+    background-color: var.$button-primary-background-active;
+    color: var.$text-active;
+  }
+
+  &--current {
+    background-color: #678fa8;
+  }
+}
+
+.main-nav__item:not(:first-child) {
+  border-top: 1px solid #e7e5e5;
+}
+
+.main-nav__item:last-child {
+  box-shadow: inset 0 -5px 5px -6px #000000;
+}

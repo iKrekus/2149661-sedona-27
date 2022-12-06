@@ -1,0 +1,14 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.single-page-head-wrapper {
+  position: relative;
+
+  &::before {
+    content: " ";
+    display: block;
+    min-height: 389px;
+    width: 100%;
+    background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center 51px, #d3e4ee url("../img/bacgrounds/background-hero-mobile.jpg") no-repeat center;
+  }
+}

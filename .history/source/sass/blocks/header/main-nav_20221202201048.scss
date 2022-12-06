@@ -1,0 +1,19 @@
+.main-nav {
+  width: 100%;
+  min-height: 56px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.main-nav__wrapper {
+  &--hidden {
+    display: none;
+  }
+}
+
+.main-nav__toggle {
+  background: none;
+  border: none;
+}

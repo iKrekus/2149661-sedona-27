@@ -1,0 +1,10 @@
+.hero-block {
+  padding-top: 389px;
+
+  &::before {
+    content: " ";
+    display: block;
+    width: 100%;
+    background: #d3e4ee url("../img/bacgrounds/background-hero-mobile.jpg") no-repeat center;
+  }
+}

@@ -1,0 +1,9 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.single-page-head-wrapper {
+  position: relative;
+}
+.single-page-head-wrapper::before {
+  content: "";
+}

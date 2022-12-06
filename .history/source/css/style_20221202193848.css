@@ -1,0 +1,26 @@
+
+.main-header {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.main-header__logo {
+  position: absolute;
+}
+.main-header__logo:hover {
+  background-color: #ffff00;
+}
+.main-header__logo--darck {
+  background-color: #ff0000;
+}
+
+.main-header__menu {
+  width: 100%;
+}
+
+.page__body {
+  width: 320px;
+  margin: auto;
+}
+
+/*# sourceMappingURL=style.css.map */

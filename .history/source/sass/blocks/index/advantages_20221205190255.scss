@@ -1,0 +1,83 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.advantages {
+  padding: 24px 18px 28px;
+  background-color: #eeeeee;
+
+  &--pictured {
+    padding: 23px 18px 46px;
+    background: none;
+  }
+}
+
+.advantages__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  &--pictured {
+    display: flex;
+    flex-direction: column;
+    row-gap: 28px;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  text-align: center;
+  padding: 8px;
+  padding-bottom: 29px;
+  border-bottom: 1px solid #d6d6d6;
+
+  &:last-child {
+    border: none;
+  }
+
+  &--pictured {
+    text-align: left;
+    padding: 0;
+    padding-left: 47px;
+    padding-top: 8px;
+    border: none;
+  }
+
+  &--icon-housing::before {
+    @include mixin.advantages-icon-mob;
+    background: url("../img/icons/advantages-housing.svg") no-repeat center/contain;
+  }
+
+  &--icon-food::before {
+    @include mixin.advantages-icon-mob;
+    background: url("../img/icons/advantages-food.svg") no-repeat center/contain;
+  }
+
+  &--icon-souvenir::before {
+    @include mixin.advantages-icon-mob;
+    background: url("../img/icons/advantages-souvenir.svg") no-repeat center/contain;
+  }
+}
+
+.advantages-wrapper {
+  padding: 0 30px;
+  padding-top: 32px;
+  position: relative;
+}
+
+.advantages__title {
+  @include mixin.font-title-mob;
+  color: var.$primary-text-color;
+  margin: 0;
+}
+
+.advantages__description {
+  @include mixin.font-description-mob;
+  color: var.$secondary-text-color;
+  padding-top: 16px;
+  margin: 0;
+}
+
+.advantages__advantages-divider {
+  margin-top: 23px;
+  margin-bottom: 12px;
+}
