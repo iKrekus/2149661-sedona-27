@@ -1,0 +1,49 @@
+@use "../mixins.scss";
+@use "../variables.scss" as var;
+
+.hero-block {
+  position: relative;
+
+  &::before {
+    content: " ";
+    display: block;
+    min-height: 389px;
+    width: 100%;
+    background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center 51px, #d3e4ee url("../img/bacgrounds/background-hero-mobile.jpg") no-repeat center;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 37px;
+    bottom: -37px;
+    width: 100%;
+    background: url("../img/bacgrounds/divider-bottom.svg") no-repeat center bottom;
+  }
+}
+
+.hero-text-wrapper {
+  padding: 0 30px;
+  padding-top: 32px;
+  position: relative;
+}
+
+.hero-block__title {
+  text-transform: uppercase;
+  text-align: center;
+
+  @include mixins.font-title-mob;
+  color: var.$primary-text-color;
+  margin: 0;
+}
+
+.hero-block__description {
+  padding-top: 35px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include mixins.font-description-mob;
+  color: var.$secondary-text-color;
+  margin: 0;
+}

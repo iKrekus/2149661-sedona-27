@@ -1,0 +1,16 @@
+.main-header {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.main-header__logo {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-header__menu {
+  width: 100%;
+  min-height: 56px;
+}

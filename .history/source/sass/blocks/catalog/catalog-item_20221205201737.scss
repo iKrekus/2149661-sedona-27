@@ -1,0 +1,33 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.catalog-item {
+  padding: 24px 18px 25px;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.catalog-item__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+  text-transform: uppercase;
+  color: var.$primary-text-color;
+}
+
+.catalog-item__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+  color: var.$secondary-text-color;
+}
+
+.catalog-item__button {
+  padding-top: 11px;
+  text-decoration: none;
+
+  &--like {
+    color: #959494;
+  }
+}

@@ -1,0 +1,51 @@
+@use "../mixins.scss";
+@use "../variables.scss" as var;
+
+.hero-block {
+  /* padding-top: 389px; */
+
+  &::before {
+    content: " ";
+    display: block;
+    min-height: 389px;
+    width: 100%;
+    background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center 51px, #d3e4ee url("../img/bacgrounds/background-hero-mobile.jpg") no-repeat center;
+  }
+}
+
+.hero-text-wrapper {
+  padding: 0 30px;
+  padding-top: 32px;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 50px;
+    background: url("../img/bacgrounds/divider-bottom.svg") no-repeat center bottom;
+  }
+}
+
+.hero-block__title {
+  text-transform: uppercase;
+  text-align: center;
+
+  @include mixins.font-title-mob;
+ /*  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px; */
+  color: var.$primary-text-color;
+  margin: 0;
+}
+
+.hero-block__description {
+  padding-top: 35px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include mixins.font-description-mob;
+ /*  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px; */
+  color: var.$secondary-text-color;
+  margin: 0;
+}

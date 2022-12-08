@@ -1,0 +1,12 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.modal {
+  &--success {
+    display: none;
+  }
+
+  &--error {
+    display: none;
+  }
+}

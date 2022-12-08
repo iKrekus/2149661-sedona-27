@@ -1,0 +1,32 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+/* .features {
+  background-color: #81b3d2;
+  text-align: center;
+}
+ */
+.features-wrapper {
+  /* padding-top: 54px;
+  padding-bottom: 40px; */
+}
+
+.features__features-title {
+  @include mixin.font-title-mob;
+  color: var.$light-text-color;
+  margin: 0;
+}
+
+.features__features-divider {
+  @include mixin.font-description-mob;
+  color: var.$light-text-color;
+  margin: 0;
+  /* margin-top: 11px;
+  margin-bottom: 17px; */
+}
+
+.features__features-description {
+  @include mixin.font-description-mob;
+  color: var.$light-text-color;
+  margin: 0;
+}

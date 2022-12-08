@@ -1,0 +1,15 @@
+@use "mixins.scss" as mixin;
+@use "variables.scss" as var;
+
+.button {
+  @include mixin.primary-button;
+
+  &:hover {
+    background-color: var.$button-primary-background-hover;
+  }
+
+  &:active {
+    background-color: var.$button-primary-background-active;
+    color: var.$text-active;
+  }
+}

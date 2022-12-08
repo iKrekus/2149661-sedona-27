@@ -1,0 +1,13 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.modal {
+  width: 320px;
+  &--success {
+    /* display: none; */
+  }
+
+  &--error {
+    display: none;
+  }
+}

@@ -1,0 +1,11 @@
+@use "../mixins.scss" as mix;
+@use "../variables.scss" as var;
+
+.features {
+  background-color: #81b3d2;
+}
+
+.features__features-title {
+  @include mix.font-title-mob;
+  color: var.$light-text-color;
+}
