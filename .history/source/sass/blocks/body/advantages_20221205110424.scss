@@ -1,0 +1,31 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.advantages {
+  list-style-type: none;
+}
+
+.advantages-wrapper {
+  padding: 0 30px;
+  padding-top: 32px;
+  position: relative;
+}
+
+.advantages__title {
+  text-transform: uppercase;
+  text-align: center;
+
+  @include mixin.font-title-mob;
+  color: var.$primary-text-color;
+  margin: 0;
+}
+
+.advantages__description {
+  padding-top: 35px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include mixin.font-description-mob;
+  color: var.$secondary-text-color;
+  margin: 0;
+}

@@ -1,0 +1,11 @@
+@use "mixins.scss" as mixin;
+@use "variables.scss" as var;
+
+.container {
+  padding: 24px 18px 25px;
+
+  &--with-devider {
+    border-bottom: 1px solid #d6d6d6;
+  }
+}
+

@@ -1,0 +1,12 @@
+.main-nav {
+  width: 100%;
+  min-height: 56px;
+  padding: 0 20px;
+  display: flex;
+}
+
+.main-nav__wrapper {
+  &--hidden {
+    display: none;
+  }
+}

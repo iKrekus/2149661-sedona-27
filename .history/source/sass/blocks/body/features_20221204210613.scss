@@ -1,0 +1,20 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.features {
+  background-color: #81b3d2;
+}
+
+.features__features-title {
+  @include mixin.font-title-mob;
+  color: var.$light-text-color;
+  margin: 0;
+}
+
+.features__features-divider {
+
+}
+
+.features__features-title {
+
+}

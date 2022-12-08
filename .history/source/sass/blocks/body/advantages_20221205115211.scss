@@ -1,0 +1,54 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.advantages {
+
+}
+
+.advantages__list {
+  list-style-type: none;
+}
+
+.advantages__item {
+  position: relative;
+
+/*   &--icon-housing::before {
+    @include mixin.advantages-icon-mob;
+    background: url("../img/icons/advantages-housing.svg") no-repeat center/cover;
+  }
+
+  &--icon-food::before {
+    @include mixin.advantages-icon-mob;
+    background: url("../img/icons/advantages-food.svg") no-repeat center/cover;
+  }
+
+  &--icon-souvenir::before {
+    @include mixin.advantages-icon-mob;
+    background: url("../img/icons/advantages-souvenir.svg") no-repeat center/cover;
+  } */
+}
+
+.advantages-wrapper {
+  padding: 0 30px;
+  padding-top: 32px;
+  position: relative;
+}
+
+.advantages__title {
+  text-transform: uppercase;
+
+
+  @include mixin.font-title-mob;
+  color: var.$primary-text-color;
+  margin: 0;
+}
+
+.advantages__description {
+  padding-top: 35px;
+  text-transform: uppercase;
+
+
+  @include mixin.font-description-mob;
+  color: var.$secondary-text-color;
+  margin: 0;
+}

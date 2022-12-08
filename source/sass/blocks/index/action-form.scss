@@ -1,0 +1,22 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.action-form {
+  padding: 38px 18px 49px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.action-form__title {
+  @include mixin.font-title-mob;
+  color: var.$primary-text-color;
+  text-align: center;
+}
+
+.action-form__description {
+  @include mixin.font-description-mob;
+  color: var.$secondary-text-color;
+  padding-top: 16px;
+  text-align: center;
+}

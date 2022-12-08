@@ -1,0 +1,9 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.catalog-item-wrapper {
+  padding-top: 11px;
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 14px;
+}

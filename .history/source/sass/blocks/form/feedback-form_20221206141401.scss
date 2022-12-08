@@ -1,0 +1,82 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.feedback-form__header {
+  padding: 36px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.feedback-form__title {
+  @include mixin.font-title-mob;
+  color: var.$primary-text-color;
+  text-align: center;
+}
+
+.feedback-form__fieldgroup {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.feedback-form__description {
+  @include mixin.font-description-mob;
+  color: var.$secondary-text-color;
+  text-align: center;
+}
+
+.feedback-form__fieldgroup-title {
+  @include mixin.font-title-mob;
+  color: var.$primary-text-color;
+  text-align: center;
+  padding-bottom: 4px;
+}
+
+.feedback-form__label {
+  display: block;
+  padding-left: 16px;
+
+  @include mixin.form-label-mob;
+  color: var.$primary-text-color;
+
+}
+
+.feedback-form__input {
+  @include mixin.font-input-mob;
+  display: block;
+  background-color: var.$input-primary-backhround;
+  padding: 0;
+  padding-left: 16px;
+  border: none;
+  width: 100%;
+  min-height: 58px;
+  position: relative;
+
+  &::placeholder {
+    @include mixin.font-input-mob;
+    color: #aaaaaa;
+  }
+}
+
+.feedback-form-input-wrapper {
+  display: flex;
+}
+
+.feedback-form__input-picture {
+  width: 58px;
+  min-height: 58px;
+  padding: 20px;
+  background-color: #e6e6e6;
+  box-sizing: border-box;
+}
+
+.feedback-form__fieldgroup-field-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form__fieldgroup-control-input {
+  appearance: none;
+}

@@ -1,0 +1,27 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.features {
+  background-color: #81b3d2;
+  padding-top: 54px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.features__features-title {
+  @include mixin.font-title-mob;
+  color: var.$light-text-color;
+  margin: 0;
+}
+
+.features__features-divider {
+  @include mixin.font-description-mob;
+  color: var.$light-text-color;
+  margin: 0;
+}
+
+.features__features-description {
+  @include mixin.font-description-mob;
+  color: var.$light-text-color;
+  margin: 0;
+}

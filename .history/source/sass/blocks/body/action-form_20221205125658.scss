@@ -1,0 +1,24 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.action-form {
+
+}
+
+.action-form__title {
+  text-transform: uppercase;
+
+
+  @include mixin.font-title-mob;
+  color: var.$primary-text-color;
+  margin: 0;
+}
+
+.action-form__description {
+  padding-top: 16px;
+  text-transform: uppercase;
+
+  @include mixin.font-description-mob;
+  color: var.$secondary-text-color;
+  margin: 0;
+}
