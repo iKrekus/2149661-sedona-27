@@ -8,6 +8,18 @@
   &--pictured {
     padding: 23px 18px 46px;
     background: none;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        padding: 0;
+      }
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 0;
+    }
   }
 }
 
@@ -20,6 +32,14 @@
     display: flex;
     flex-direction: column;
     row-gap: 28px;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    & {
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 
@@ -34,26 +54,52 @@
     border: none;
   }
 
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 28px 15px 24px;
+      border: none;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 63px 50px 41px;
+      border: none;
+    }
+  }
+
   &--pictured {
     text-align: left;
     padding: 0;
     padding-left: 47px;
     padding-top: 8px;
     border: none;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        padding: 158px 33px 60px;
+      }
+    }
+
+    @media (min-width: var.$desktop-width) {
+      & {
+        padding: 169px 50px 69px;
+      }
+    }
   }
 
   &--icon-housing::before {
-    @include mixin.advantages-icon-mob;
+    @include mixin.advantages-icon;
     background: url("../img/icons/advantages-housing.svg") no-repeat center/contain;
   }
 
   &--icon-food::before {
-    @include mixin.advantages-icon-mob;
+    @include mixin.advantages-icon;
     background: url("../img/icons/advantages-food.svg") no-repeat center/contain;
   }
 
   &--icon-souvenir::before {
-    @include mixin.advantages-icon-mob;
+    @include mixin.advantages-icon;
     background: url("../img/icons/advantages-souvenir.svg") no-repeat center/contain;
   }
 }
@@ -65,14 +111,33 @@
 }
 
 .advantages__title {
-  @include mixin.font-title-mob;
+  @include mixin.font-title;
   color: var.$primary-text-color;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 0 30px;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 0 80px;
+    }
+  }
 }
 
 .advantages__description {
-  @include mixin.font-description-mob;
+  @include mixin.font-description;
   color: var.$secondary-text-color;
   padding-top: 16px;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      text-align: center;
+    }
+  }
 }
 
 .advantages__advantages-divider {

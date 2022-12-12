@@ -6,16 +6,36 @@
   display: flex;
   flex-direction: column;
   row-gap: 32px;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 61px 155px 58px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 61px 382px 58px;
+    }
+  }
 }
 
 .action-form__title {
-  @include mixin.font-title-mob;
+  @include mixin.font-title;
   color: var.$primary-text-color;
   text-align: center;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 26px;
+    }
+  }
 }
 
 .action-form__description {
-  @include mixin.font-description-mob;
+  @include mixin.font-description;
   color: var.$secondary-text-color;
   padding-top: 16px;
   text-align: center;

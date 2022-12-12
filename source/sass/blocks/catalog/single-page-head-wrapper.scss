@@ -9,6 +9,18 @@
     display: block;
     min-height: 158px;
     width: 100%;
-    background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/sinle-page-sedona.svg") no-repeat center 51px, #d3e4ee url("../img/bacgrounds/background-hero-desktop.jpg") no-repeat center top 80%;
+    background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/single-page-sedona.svg") no-repeat center/60%, #ffffff url("../img/bacgrounds/background-hero-desktop.jpg") no-repeat center bottom;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        min-height: 290px;
+      }
+    }
+
+    @media (min-width: var.$desktop-width) {
+      & {
+        background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/single-page-sedona.svg") no-repeat center/50%, #ffffff url("../img/bacgrounds/background-hero-desktop.jpg") no-repeat center bottom;
+      }
+    }
   }
 }

@@ -9,7 +9,20 @@
     display: block;
     min-height: 389px;
     width: 100%;
-    background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center 51px, #d3e4ee url("../img/bacgrounds/background-hero-mobile.jpg") no-repeat center;
+    background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center 51px, #d3e4ee url("../img/bacgrounds/background-hero.jpg") no-repeat center;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        min-height: 518px;
+        background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center/60%, #d3e4ee url("../img/bacgrounds/background-hero.jpg") no-repeat center;
+      }
+    }
+
+    @media (min-width: var.$desktop-width) {
+      & {
+        background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center/40%, #d3e4ee url("../img/bacgrounds/background-hero.jpg") no-repeat center;
+      }
+    }
   }
 
   &::after {
@@ -20,6 +33,14 @@
     bottom: -37px;
     width: 100%;
     background: url("../img/bacgrounds/divider-bottom.svg") no-repeat center bottom;
+    background-size: cover;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    &::after {
+      @include mixin.font-title;
+      display: none;
+    }
   }
 }
 
@@ -27,16 +48,30 @@
   padding: 0 30px;
   padding-top: 32px;
   position: relative;
+
+  @include mixin.font-title;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding-bottom: 55px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding-top: 59px;
+    }
+  }
 }
 
 .hero-block__title {
-  @include mixin.font-title-mob;
+  @include mixin.font-title;
   color: var.$primary-text-color;
   text-align: center;
 }
 
 .hero-block__description {
-  @include mixin.font-description-mob;
+  @include mixin.font-description;
   color: var.$secondary-text-color;
   padding-top: 35px;
   text-align: center;

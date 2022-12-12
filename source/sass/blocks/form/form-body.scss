@@ -9,13 +9,13 @@
 }
 
 .action-form__title {
-  @include mixin.font-title-mob;
+  @include mixin.font-title;
   color: var.$primary-text-color;
   text-align: center;
 }
 
 .action-form__description {
-  @include mixin.font-description-mob;
+  @include mixin.font-description;
   color: var.$secondary-text-color;
   padding-top: 16px;
   text-align: center;

@@ -6,5 +6,17 @@
 
   &--with-devider:not(:last-of-type) {
     border-bottom: 1px solid #d6d6d6;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        border-bottom: none;
+      }
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 0;
+    }
   }
 }

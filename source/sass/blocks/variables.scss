@@ -1,12 +1,14 @@
 //Resolutions for media
 $tablet-width: 768px;
-$desctop-width: 1200px;
+$desktop-width: 1200px;
 $mobile-witdh-obly: 767px;
 
 //Variable colors
 $primary-text-color: #000000;
 $secondary-text-color: #333333;
 $light-text-color: #ffffff;
+$light-page-backround-color: #ffffff;
+$darck-page-backround-color: #f2f2f2;
 
 
 $button-primary-background: #81b3d2;
@@ -19,5 +21,7 @@ $text-disabled: rgba(255, 255, 255, 0.3);
 $input-primary-backhround: #f2f2f2;
 
 //Pictures
-$advantages-icon-width: 40px;
-$advantages-icon-height: 40px;
+$advantages-icon-width: 80px;
+$advantages-icon-height: 80px;
+$advantages-icon-width-mob: 40px;
+$advantages-icon-height-mob: 40px;
