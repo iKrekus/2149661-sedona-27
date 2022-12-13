@@ -1,16 +1,50 @@
 @use "../mixins.scss" as mixin;
 @use "../variables.scss" as var;
 
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 48px;
+      padding: 0 60px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 0 120px;
+      row-gap: 56px;
+    }
+  }
+}
+
 .feedback-form__header {
   padding: 36px 20px 28px;
   display: flex;
   flex-direction: column;
   row-gap: 24px;
   border-bottom: 1px solid #d6d6d6;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 64px 166px 102px;
+      border: none;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 64px 356px 102px;
+    }
+  }
 }
 
 .feedback-form__title {
-  @include mixin.font-title-mob;
+  @include mixin.feedback-form__title;
   color: var.$primary-text-color;
   text-align: center;
 }
@@ -19,42 +53,129 @@
   display: flex;
   flex-direction: column;
   row-gap: 16px;
+
+  @media (min-width: var.$tablet-width) {
+    &:first-of-type {
+      border-right: 1px solid #d6d6d6;
+      padding-bottom: 15px;
+    }
+
+    & {
+      row-gap: 28px;
+    }
+
+    &--leftsided {
+      padding-right: 43px;
+
+      @media (min-width: var.$desktop-width) {
+        & {
+          padding-right: 63px;
+        }
+      }
+    }
+
+    &--rightsided {
+      padding-left: 43px;
+
+      @media (min-width: var.$desktop-width) {
+        & {
+          padding-left: 63px;
+        }
+      }
+    }
+
+    &--fullwidth {
+      grid-column: 1 / -1;
+      position: relative;
+    }
+
+    &--textarea {
+      @media (min-width: var.$tablet-width) {
+        padding-bottom: 64px;
+      }
+    }
+  }
+}
+
+.feedback-form__fieldgroup-title-wrapper {
+  position: relative;
+
+  @media (min-width: var.$tablet-width) {
+    &::after {
+      content: "";
+      width: 123px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      background-color: #dbdbdb;
+    }
+
+    &::before {
+      content: "";
+      width: 123px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background-color: #dbdbdb;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    &::after {
+      width: 240px;
+    }
+
+    &::before {
+      width: 240px;
+    }
+  }
 }
 
 .feedback-form__description {
-  @include mixin.font-description-mob;
+  @include mixin.font-description;
   color: var.$secondary-text-color;
   text-align: center;
 }
 
 .feedback-form__fieldgroup-title {
-  @include mixin.font-title-mob;
+  @include mixin.font-title;
   color: var.$primary-text-color;
   text-align: center;
   padding-bottom: 4px;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 0;
+    }
+  }
 }
 
 .feedback-form__label {
   display: block;
   padding-left: 16px;
 
-  @include mixin.form-label-mob;
+  @include mixin.form-label;
   color: var.$primary-text-color;
 }
 
 .feedback-form__input {
-  @include mixin.font-input-mob;
+  @include mixin.font-input;
   display: block;
   background-color: var.$input-primary-backhround;
   padding: 0;
   padding-left: 16px;
   border: none;
   width: 100%;
-  min-height: 58px;
+  height: 58px;
   position: relative;
+  box-sizing: border-box;
 
   &::placeholder {
-    @include mixin.font-input-mob;
+    @include mixin.font-input;
     color: #aaaaaa;
   }
 
@@ -80,6 +201,12 @@
   padding: 20px;
   background-color: #e6e6e6;
   box-sizing: border-box;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 16px 20px;
+    }
+  }
 }
 
 .feedback-form__fieldgroup-field-wrapper {
@@ -88,15 +215,55 @@
 
   &--list {
     row-gap: 16px;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 16px;
+      }
+    }
+
+    @media (min-width: var.$desktop-width) {
+      & {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 31px 0;
+      }
+    }
+  }
+
+  &--checks {
+    @media (min-width: var.$tablet-width) {
+      & {
+        padding: 0 64px;
+      }
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    &--textarea {
+      padding: 0 96px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    &--textarea {
+      padding: 0 96px;
+    }
   }
 }
 
 .feedback-form__fieldgroup-control-label {
   cursor: pointer;
 
-  @include mixin.font-input-mob;
+  @include mixin.font-input;
+  color: var.$primary-text-color;
   display: flex;
   align-items: center;
+  text-transform: none;
 }
 
 .feedback-form__fieldgroup-control-input {
@@ -108,6 +275,7 @@
   height: 46px;
   box-sizing: border-box;
   cursor: pointer;
+  color: var.$primary-text-color;
 
   &--radio::before {
     content: "";
@@ -175,26 +343,67 @@
   background-color: #f2f2f2;
   border: none;
   padding: 16px;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      min-height: 10em;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      min-height: 10em;
+    }
+  }
 }
 
 .feedback-form__textarea::placeholder {
   font-family: "PT Sans", sans-serif;
 
-  @include mixin.font-input-mob;
+  @include mixin.font-input;
   color: #aaaaaa;
 }
 
-.feedback-form__submit {
+.feedback-form__submit-wrapper {
   position: relative;
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 0 96px;
+    }
+  }
 }
 
-.feedback-form__submit::after {
-  content: "* — обязательные поля";
-  position: absolute;
-  bottom: -26px;
-  right: 0;
-  color: #ababab;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 21px;
+.feedback-form__submit {
+  width: 100%;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      width: 50%;
+    }
+  }
+
+  &::after {
+    content: "* — обязательные поля";
+    position: absolute;
+    bottom: -26px;
+    right: 0;
+    color: #ababab;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        bottom: 20%;
+        right: 0;
+      }
+    }
+
+    @media (min-width: var.$desktop-width) {
+      & {
+        right: 96px;
+      }
+    }
+  }
 }

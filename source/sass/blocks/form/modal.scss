@@ -2,7 +2,7 @@
 @use "../variables.scss" as var;
 
 .modal {
-  width: 320px;
+  min-width: 320px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -12,12 +12,36 @@
 
   &--success {
     display: none;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        min-width: 640px;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%, -40%);
+      }
+    }
+
+    @media (min-width: var.$desktop-width) {
+      & {
+        max-width: 640px;
+      }
+    }
   }
 
   &--error {
     top: 20%;
     transform: translate(-50%, -20%);
     display: none;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        max-width: 400px;
+      }
+    }
   }
 }
 
@@ -26,31 +50,74 @@
   flex-direction: column;
   align-items: center;
   row-gap: 37px;
-  padding: 44px 30px 0;
   min-height: 225px;
   box-sizing: border-box;
 
   &--error {
-    padding: 44px 30px 35px;
+    @media (min-width: var.$tablet-width) {
+      & {
+        padding: 48px 46px 35px;
+      }
+    }
+  }
+
+  &--success {
+    padding: 44px 30px 0;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        padding: 57px 110px 34px;
+      }
+    }
   }
 }
 
 .modal__button {
-  border: 20px solid #f2f2f2;
   width: 100%;
 
   &--error {
     border: none;
-    width: 80%;
+    min-width: 272px;
+  }
+
+  &--success {
+    border: 20px solid #f2f2f2;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        border-top: 44px;
+        border-bottom: 44px;
+        border-left: 91px;
+        border-right: 91px;
+        border-style: solid;
+        border-color: #f2f2f2;
+      }
+    }
   }
 }
 
 .modal__title {
-  @include mixin.font-title-mob;
+  @include mixin.font-title;
   text-align: center;
+
+  &--success {
+    @media (min-width: var.$tablet-width) {
+      & {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  &--error {
+    @media (min-width: var.$tablet-width) {
+      & {
+        padding: 0 60px;
+      }
+    }
+  }
 }
 
 .modal__description {
-  @include mixin.font-description-mob;
+  @include mixin.font-description;
   text-align: center;
 }

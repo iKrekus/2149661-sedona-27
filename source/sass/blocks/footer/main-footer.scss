@@ -5,10 +5,18 @@
   padding: 45px 18px 22px;
   display: grid;
   row-gap: 33px;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 36px 0;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+    }
+  }
 }
 
 .main-footer__title {
-  @include mixin.font-title-mob;
+  @include mixin.font-title;
   color: var.$primary-text-color;
   text-align: center;
 }

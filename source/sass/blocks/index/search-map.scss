@@ -1,6 +1,9 @@
 @use "../mixins.scss" as mixin;
 @use "../variables.scss" as var;
 
-.search-map__map {
+.search-map {
   display: block;
+  width: 100%;
+  min-height: 350px;
+  background: #ffffff url("../img/photo/map.jpg") no-repeat center;
 }

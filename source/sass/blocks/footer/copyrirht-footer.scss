@@ -6,7 +6,7 @@
 }
 
 .copyrirht-footer__link {
-  @include mixin.font-description-mob;
+  @include mixin.font-description;
   color: var.$primary-text-color;
   display: flex;
   justify-content: center;
