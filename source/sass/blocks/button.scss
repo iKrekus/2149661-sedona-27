@@ -10,11 +10,11 @@
 
   &:active {
     background-color: var.$button-primary-background-active;
-    color: var.$text-active;
+    color: var.$button-text-active;
   }
 
   &:disabled {
     background-color: var.$button-primary-background-disabled;
-    color: var.$text-disabled;
+    color: var.$button-text-disabled;
   }
 }
