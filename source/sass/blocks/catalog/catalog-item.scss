@@ -10,16 +10,16 @@
       width: 50%;
       border: none;
     }
+
+    &--current {
+      width: 100%;
+    }
   }
 
   @media (min-width: var.$desktop-width) {
     & {
       width: 33.3%;
     }
-  }
-
-  &--current {
-    width: 100%;
   }
 
   &:nth-child(2n+3) .catalog-item-wrapper {

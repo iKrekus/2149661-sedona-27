@@ -2,18 +2,112 @@
 @use "../variables.scss" as var;
 
 .main-nav {
-  width: 100%;
-  /* min-height: 56px; */
+  width: auto;
+  position: relative;
   display: flex;
   justify-content: end;
-  align-items: center;
-  position: relative;
+  padding: 17px 0;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  &--opened .main-nav__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &--opened .main-nav__toggle::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: #ffffff;
+  }
+
+  &--opened .main-nav__toggle::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    background-color: #ffffff;
+  }
+
+  &--closed .main-nav__wrapper {
+    display: none;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &--closed .main-nav__toggle::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 4px;
+    top: 0;
+    left: 0;
+    background-color: #81b3d2;
+    box-shadow: 0 8px 0 #81b3d2, 0 16px 0 #81b3d2;
+  }
 }
 
-.main-nav__wrapper {
+/*nojs*/
+.main-nav--nojs .main-nav__wrapper {
+  position: static;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs.main-nav {
+  padding: 0;
+}
+
+.main-nav__toggle {
+  width: 23px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  margin-right: 20px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.main-nav__wrapper {
   width: 100%;
   position: absolute;
   top: 0;
@@ -31,13 +125,12 @@
       column-gap: 240px;
     }
   }
-
-  &--hidden {
-    display: none;
-  }
 }
 
-.main-nav__toggle {
+/* .main-nav__toggle {
+  display: flex;
+  justify-content: end;
+  z-index: 2;
   background: none;
   border: none;
   padding-top: 17px;
@@ -68,12 +161,11 @@
     cursor: pointer;
   }
 }
-
+ */
 .main-nav__item {
   @include mixin.font-nav;
   text-align: center;
-  padding-top: 18px;
-  padding-bottom: 17px;
+  padding: 18px 20px 17px;
   box-sizing: border-box;
   color: var.$light-text-color;
   border-top: 1px solid #aecee2;

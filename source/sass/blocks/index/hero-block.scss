@@ -14,13 +14,13 @@
     @media (min-width: var.$tablet-width) {
       & {
         min-height: 518px;
-        background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center/60%, #d3e4ee url("../img/bacgrounds/background-hero.jpg") no-repeat center;
+        background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center/461px, #d3e4ee url("../img/bacgrounds/background-hero.jpg") no-repeat center;
       }
     }
 
     @media (min-width: var.$desktop-width) {
       & {
-        background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center/40%, #d3e4ee url("../img/bacgrounds/background-hero.jpg") no-repeat center;
+        background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center/459px, #d3e4ee url("../img/bacgrounds/background-hero.jpg") no-repeat center;
       }
     }
   }

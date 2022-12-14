@@ -166,6 +166,9 @@
   border: none;
   color: var.$light-text-color;
   background-color: var.$button-primary-background;
+  box-sizing: border-box;
+  width: 284px;
+  margin: 0 auto;
 
   &:hover {
     background-color: var.$button-primary-background-hover;
@@ -182,6 +185,7 @@
   @media (min-width: var.$tablet-width) {
     & {
       font-size: 21px;
+      width: 458px;
     }
   }
 }
