@@ -5,8 +5,12 @@ $mobile-witdh-obly: 767px;
 
 //Variable colors
 $primary-text-color: #000000;
+$primary-text-color-hover: #81b3d2;
+$primary-text-color-active: rgba(0, 0, 0, 0.3);
+$primary-text-color-disabled: #766357;
 $secondary-text-color: #333333;
 $light-text-color: #ffffff;
+
 $light-page-backround-color: #ffffff;
 $darck-page-backround-color: #f2f2f2;
 
@@ -15,8 +19,8 @@ $button-primary-background: #81b3d2;
 $button-primary-background-hover: #669ec0;
 $button-primary-background-active: #5496bd;
 $button-primary-background-disabled: #e5e5e5;
-$text-active: rgba(255, 255, 255, 0.3);
-$text-disabled: rgba(255, 255, 255, 0.3);
+$button-text-active: rgba(255, 255, 255, 0.3);
+$button-text-disabled: rgba(255, 255, 255, 0.3);
 
 $input-primary-backhround: #f2f2f2;
 
