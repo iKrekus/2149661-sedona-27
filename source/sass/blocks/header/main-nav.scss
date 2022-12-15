@@ -12,6 +12,7 @@
     & {
       padding: 0;
       width: 100%;
+      justify-content: center;
     }
   }
 
@@ -114,6 +115,7 @@
 
   @media (min-width: var.$tablet-width) {
     & {
+      max-width: 768px;
       column-gap: 153px;
       flex-direction: row;
       position: relative;
@@ -122,6 +124,7 @@
 
   @media (min-width: var.$desktop-width) {
     & {
+      max-width: 1200px;
       column-gap: 240px;
     }
   }

@@ -9,12 +9,12 @@
     display: block;
     min-height: 389px;
     width: 100%;
-    background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center 51px, #d3e4ee url("../img/bacgrounds/background-hero.jpg") no-repeat center;
+    background: url("../img/bacgrounds/divider.svg") no-repeat center bottom -1px, url("../img/bacgrounds/hero-title.svg") no-repeat center 51px, #d3e4ee url("../img/bacgrounds/background-hero.jpg") no-repeat center;
 
     @media (min-width: var.$tablet-width) {
       & {
         min-height: 518px;
-        background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center/461px, #d3e4ee url("../img/bacgrounds/background-hero.jpg") no-repeat center;
+        background: url("../img/bacgrounds/divider.svg") no-repeat center bottom -1px, url("../img/bacgrounds/hero-title.svg") no-repeat center/461px, #d3e4ee url("../img/bacgrounds/background-hero.jpg") no-repeat center;
       }
     }
 
