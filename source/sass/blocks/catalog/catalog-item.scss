@@ -20,6 +20,10 @@
     & {
       width: 33.3%;
     }
+
+    &--current {
+      width: 100%;
+    }
   }
 
   &:nth-child(2n+3) .catalog-item-wrapper {
