@@ -32,6 +32,8 @@
 
 .features__image {
   display: block;
+  object-fit: cover;
+  width: 100%;
 }
 
 .features-wrapper {
@@ -74,3 +76,5 @@
   @include mixin.font-description;
   color: var.$light-text-color;
 }
+
+

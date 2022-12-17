@@ -5,6 +5,15 @@
   border-bottom: 1px solid #d6d6d6;
   position: relative;
 
+  &--current .catalog-item__image {
+    max-width: none;
+  }
+
+  &--current {
+    width: 100%;
+    max-width: 324px;
+  }
+
   @media (min-width: var.$tablet-width) {
     & {
       width: 50%;
@@ -13,6 +22,7 @@
 
     &--current {
       width: 100%;
+      max-width: none;
     }
   }
 
@@ -27,7 +37,13 @@
   }
 
   &:nth-child(2n+3) .catalog-item-wrapper {
-    background-color: #f2f2f2;
+    background-color: transparent;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        background-color: #f2f2f2;
+      }
+    }
 
     @media (min-width: var.$desktop-width) {
       & {
@@ -120,4 +136,13 @@
 
 .catalog-item__image {
   display: block;
+  object-fit: cover;
+  width: 100%;
+  max-width: 324px;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      max-width: 100%;
+    }
+  }
 }
