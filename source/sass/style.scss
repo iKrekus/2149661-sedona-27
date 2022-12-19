@@ -1,6 +1,6 @@
 // Начните писать стили здесь
-@use "./blocks/mixins.scss";
-@use "./blocks/variables.scss";
+@use "./blocks/mixins.scss" as mixin;
+@use "./blocks/variables.scss" as var;
 @use "./blocks/container.scss";
 @use "./blocks/button.scss";
 @use "./blocks/header/main-header.scss";
@@ -15,12 +15,16 @@
 @use "./blocks/index/search-map.scss";
 @use "./blocks/catalog/single-page-head-wrapper.scss";
 @use "./blocks/catalog/page-head-content.scss";
+@use "./blocks/catalog/page-footer-content.scss";
 @use "./blocks/catalog/catalog-item.scss";
 @use "./blocks/catalog/likes-counter.scss";
 @use "./blocks/catalog/catalog-item-wrapper.scss";
+@use "./blocks/catalog/catalog-content.scss";
+@use "./blocks/catalog/video.scss";
 @use "./blocks/form/modal-container.scss";
 @use "./blocks/form/modal.scss";
 @use "./blocks/form/feedback-form.scss";
+@use "./blocks/form/form-container.scss";
 
 @font-face {
   font-family: "PT sans";
@@ -38,9 +42,18 @@
   font-display: swap;
 }
 
-/* .page__body */
-body {
+.page {
   font-family: "PT Sans", sans-serif;
+  background-color: var.$light-page-backround-color;
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      background-color: var.$darck-page-backround-color;
+    }
+  }
+}
+
+.page__body {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -48,9 +61,39 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
+  background-color: var.$light-page-backround-color;
+
+  @media (min-width: var.$tablet-width) {
+    min-width: var.$tablet-width;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      width: var.$desktop-width;
+      box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+    }
+  }
 }
+
+.form-body {
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: var.$light-page-backround-color;
+
+  @media (min-width: var.$tablet-width) {
+    width: var.$tablet-width;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      width: var.$desktop-width;
+      box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+    }
+  }
+}
+
 
 .visually-hidden {
   position: absolute;

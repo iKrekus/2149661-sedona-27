@@ -6,20 +6,16 @@
   display: flex;
   flex-direction: column;
   row-gap: 37px;
-
-  &:last-of-type {
-    border: none;
-  }
 }
 
 .page-head-content__title {
-  @include mixin.font-title-mob;
+  @include mixin.page-title;
   color: var.$primary-text-color;
   text-align: center;
 }
 
 .page-head-content__description {
-  @include mixin.font-description-mob;
+  @include mixin.page-description;
   color: var.$primary-text-color;
   text-align: center;
 }

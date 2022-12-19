@@ -6,27 +6,73 @@
   flex-direction: column;
   background-color: #81b3d2;
   text-align: center;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      @include mixin.font-title;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+
+    &--reverce {
+      grid-template-columns: 2fr 1fr;
+    }
+
+    &--reverce .features-wrapper {
+      order: 0;
+
+      @media (min-width: var.$tablet-width) {
+        & {
+          order: 2;
+        }
+      }
+    }
+  }
+}
+
+.features__image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
 }
 
 .features-wrapper {
   padding-top: 54px;
   padding-bottom: 40px;
+  box-sizing: border-box;
+
+  @include mixin.font-title;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 52px 33px 31px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      width: 400px;
+    }
+  }
 }
 
 .features__features-title {
-  @include mixin.font-title-mob;
+  @include mixin.font-title;
   color: var.$light-text-color;
   margin: 0;
+  padding: 0  20px;
+
+  @include mixin.font-title;
 }
 
 .features__features-divider {
-  @include mixin.font-description-mob;
+  @include mixin.font-description;
   color: var.$light-text-color;
   margin-top: 11px;
   margin-bottom: 17px;
 }
 
 .features__features-description {
-  @include mixin.font-description-mob;
+  @include mixin.font-description;
   color: var.$light-text-color;
 }

@@ -2,37 +2,41 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/source/favicon.ico"><!-- 32×32 -->
+    <link rel="icon" href="./img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicosn/favicon-180.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
     <title>Оставьте свой отзыв</title>
   </head>
   <body class="form-body">
     <header class="main-header">
-      <a class="main-header__logo">
+      <a class="main-header__logo" href="index.html">
         <img src="img/logos/logo.svg" width="185" height="96" alt="Логотип 'Седона'.">
       </a>
-      <div class="main-nav">
+      <div class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Меню</span>
-          <svg width="23" height="22" viewBox="0 0 23 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.9 0H0v4h22.9V0ZM22.9 9H0v4h22.9V9ZM22.9 18H0v4h22.9v-4Z"/></svg>
         </button>
-        <nav class="main-nav__wrapper main-nav__wrapper--hidden">
-          <a class="main-nav__item" href="index.html">
-            Главная
-          </a>
-          <a class="main-nav__item main-nav__item" href="catalog.html">
-            Фото и видео
-          </a>
-          <a class="main-nav__item main-nav__item--current" href="form.html">
-            Форма отзыва
-          </a>
-          <a class="main-nav__item" href="https://htmlacademy.ru/">
-            HTMLACADEMY
-          </a>
+        <nav class="main-nav__wrapper">
+          <div class="main-nav__part-wrapper">
+            <a class="main-nav__item" href="index.html">
+              Главная
+            </a>
+            <a class="main-nav__item" href="catalog.html">
+              Фото и видео
+            </a>
+          </div>
+          <div class="main-nav__part-wrapper">
+            <a class="main-nav__item main-nav__item--current" href="form.html">
+              Форма отзыва
+            </a>
+            <a class="main-nav__item" href="https://htmlacademy.ru/">
+              HTMLACADEMY
+            </a>
+          </div>
         </nav>
-        <button class="main-nav__toggle main-nav__toggle--close" type="button">
-          <span class="visually-hidden">Закрыть</span>
-          <svg width="23" height="23" viewBox="0 0 23 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.2 2.8 19.4 0l-8.3 8.3L2.8 0 0 2.8l8.3 8.3L0 19.4l2.8 2.8 8.3-8.3 8.3 8.3 2.8-2.8-8.3-8.3 8.3-8.3Z"/></svg>
-        </button>
       </div>
     </header>
     <main class="form-container">
@@ -49,7 +53,7 @@
         </div>
       <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
 
-        <div class="feedback-form__fieldgroup container container--with-devider">
+        <div class="feedback-form__fieldgroup feedback-form__fieldgroup--leftsided container container--with-devider">
           <h2 class="feedback-form__fieldgroup-title">
             Представьтесь
           </h2>
@@ -72,7 +76,7 @@
               <input class="feedback-form__input" type="text" name="feedback-form-thirdname" id="feedback-form-thirdname" placeholder="Ваше отчество" value="Викторович">
           </div>
         </div>
-        <div class="feedback-form__fieldgroup container container--with-devider">
+        <div class="feedback-form__fieldgroup feedback-form__fieldgroup--rightsided container container--with-devider">
           <h2 class="feedback-form__fieldgroup-title">
             Контактная информация:
           </h2>
@@ -99,11 +103,13 @@
             </div>
           </div>
         </div>
-        <div class="feedback-form__fieldgroup container container--with-devider">
-          <h2 class="feedback-form__fieldgroup-title">
-            Ваше Общее впечатление:
-          </h2>
-          <div class="feedback-form__fieldgroup-field-wrapper feedback-form__fieldgroup-field-wrapper--list">
+        <div class="feedback-form__fieldgroup container container--with-devider feedback-form__fieldgroup--fullwidth">
+          <div class="feedback-form__fieldgroup-title-wrapper">
+            <h2 class="feedback-form__fieldgroup-title">
+              Ваше Общее впечатление:
+            </h2>
+          </div>
+          <div class="feedback-form__fieldgroup-field-wrapper feedback-form__fieldgroup-field-wrapper--list feedback-form__fieldgroup-field-wrapper--radio">
             <label class="feedback-form__fieldgroup-control-label">
               <input class="feedback-form__fieldgroup-control-input feedback-form__fieldgroup-control-input--radio" type="radio" name="feedback" value="positive" id="positive-feedback" checked>Скорее положительное
             </label>
@@ -115,11 +121,13 @@
             </label>
           </div>
         </div>
-        <div class="feedback-form__fieldgroup container container--with-devider">
-          <h2 class="feedback-form__fieldgroup-title">
-            Посещенные<br>достопримечательности:
-          </h2>
-          <div class="feedback-form__fieldgroup-field-wrapper feedback-form__fieldgroup-field-wrapper--list">
+        <div class="feedback-form__fieldgroup container container--with-devider feedback-form__fieldgroup--fullwidth">
+          <div class="feedback-form__fieldgroup-title-wrapper">
+            <h2 class="feedback-form__fieldgroup-title">
+              Посещенные<br>достопримечательности:
+            </h2>
+          </div>
+          <div class="feedback-form__fieldgroup-field-wrapper feedback-form__fieldgroup-field-wrapper--list feedback-form__fieldgroup-field-wrapper--checks">
             <label class="feedback-form__fieldgroup-control-label">
               <input class="feedback-form__fieldgroup-control-input feedback-form__fieldgroup-control-input--checkbox" type="checkbox" name="sight-place" value="devil-bridge" id="devil-bridge-sight-place" checked>Мост Дьявола
             </label>
@@ -134,14 +142,18 @@
             </label>
           </div>
         </div>
-        <div class="feedback-form__fieldgroup container container--with-devider">
-          <h2 class="feedback-form__fieldgroup-title">
-            Опишите свои эмоции:
-          </h2>
-          <div class="feedback-form__fieldgroup-field-wrapper">
+        <div class="feedback-form__fieldgroup container container--with-devider feedback-form__fieldgroup--fullwidth feedback-form__fieldgroup--textarea">
+          <div class="feedback-form__fieldgroup-title-wrapper">
+            <h2 class="feedback-form__fieldgroup-title">
+              Опишите свои эмоции:
+            </h2>
+          </div>
+          <div class="feedback-form__fieldgroup-field-wrapper feedback-form__fieldgroup-field-wrapper--textarea">
             <textarea class="feedback-form__textarea" name="message" id="feedback-form-textarea" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
           </div>
-          <button class="feedback-form__submit button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+          <div class="feedback-form__submit-wrapper">
+            <button class="feedback-form__submit button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+          </div>
         </div>
 
       </form>
@@ -184,7 +196,7 @@
     <div class="modal-container modal-container--hidden">
       <div class="modal modal--error">
         <div class="modal-wrapper modal-wrapper--error">
-          <p class="modal__title">
+          <p class="modal__title modal__title--error">
             ЧТО-ТО ПОШЛО НЕ ТАК!
           </p>
           <p class="modal__description">
@@ -194,16 +206,17 @@
         </div>
       </div>
       <div class="modal modal--success">
-        <div class="modal-wrapper">
+        <div class="modal-wrapper modal-wrapper--success">
           <p class="modal__title">
             Ваш отзыв отправлен!
           </p>
           <p class="modal__description">
-            Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы опубликуем его на сайте.
+            Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
           </p>
         </div>
-        <button class="modal__button button" type="button">Закрыть окно</button>
+        <button class="modal__button modal__button--success button" type="button">Закрыть окно</button>
       </div>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
