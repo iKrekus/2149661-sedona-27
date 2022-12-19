@@ -193,11 +193,24 @@
 
 .feedback-form-input-wrapper {
   display: flex;
+
+  &:active,
+  &:focus-within {
+    outline: none;
+    box-shadow: inset 0 0 0 4px #e5e5e5;
+    background-color: #ffffff;
+  }
+
+  &:focus .feedback-form__input,
+  &:focus-within .feedback-form__input {
+    box-shadow: none;
+    background: none;
+  }
 }
 
 .feedback-form__input-picture {
   width: 58px;
-  min-height: 58px;
+  height: 58px;
   padding: 20px;
   background-color: #e6e6e6;
   box-sizing: border-box;
@@ -214,13 +227,12 @@
   flex-direction: column;
 
   &--list {
-    row-gap: 16px;
+    gap: 16px;
 
     @media (min-width: var.$tablet-width) {
       & {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 16px;
       }
     }
 
@@ -235,7 +247,21 @@
     }
   }
 
+  &--radio {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        padding: 0 64px;
+      }
+    }
+  }
+
   &--checks {
+    flex-direction: row;
+    flex-wrap: wrap;
+
     @media (min-width: var.$tablet-width) {
       & {
         padding: 0 64px;

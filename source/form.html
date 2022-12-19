@@ -3,12 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/source/favicon.ico"><!-- 32×32 -->
+    <link rel="icon" href="./img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicosn/favicon-180.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
     <title>Оставьте свой отзыв</title>
   </head>
   <body class="form-body">
     <header class="main-header">
-      <a class="main-header__logo">
+      <a class="main-header__logo" href="index.html">
         <img src="img/logos/logo.svg" width="185" height="96" alt="Логотип 'Седона'.">
       </a>
       <div class="main-nav main-nav--closed main-nav--nojs">
@@ -105,7 +109,7 @@
               Ваше Общее впечатление:
             </h2>
           </div>
-          <div class="feedback-form__fieldgroup-field-wrapper feedback-form__fieldgroup-field-wrapper--list">
+          <div class="feedback-form__fieldgroup-field-wrapper feedback-form__fieldgroup-field-wrapper--list feedback-form__fieldgroup-field-wrapper--radio">
             <label class="feedback-form__fieldgroup-control-label">
               <input class="feedback-form__fieldgroup-control-input feedback-form__fieldgroup-control-input--radio" type="radio" name="feedback" value="positive" id="positive-feedback" checked>Скорее положительное
             </label>
@@ -117,7 +121,7 @@
             </label>
           </div>
         </div>
-        <div class="feedback-form__fieldgroup container container--with-devider feedback-form__fieldgroup--fullwidth feedback-form__fieldgroup--checks">
+        <div class="feedback-form__fieldgroup container container--with-devider feedback-form__fieldgroup--fullwidth">
           <div class="feedback-form__fieldgroup-title-wrapper">
             <h2 class="feedback-form__fieldgroup-title">
               Посещенные<br>достопримечательности:

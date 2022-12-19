@@ -1,0 +1,29 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.video {
+  position: relative;
+  text-align: center;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 0 60px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 0 60px;
+    }
+  }
+}
+
+.video__container {
+  width: 100%;
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      max-width: 800px;
+    }
+  }
+}
