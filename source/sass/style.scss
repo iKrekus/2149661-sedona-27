@@ -83,7 +83,7 @@
   background-color: var.$light-page-backround-color;
 
   @media (min-width: var.$tablet-width) {
-    width: var.$tablet-width;
+    min-width: var.$tablet-width;
   }
 
   @media (min-width: var.$desktop-width) {

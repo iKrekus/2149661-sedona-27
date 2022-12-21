@@ -103,7 +103,8 @@
   @media (min-width: var.$tablet-width) {
     &::after {
       content: "";
-      width: 123px;
+      width: 100%;
+      max-width: 123px;
       height: 1px;
       position: absolute;
       top: 50%;
@@ -114,7 +115,8 @@
 
     &::before {
       content: "";
-      width: 123px;
+      width: 100%;
+      max-width: 123px;
       height: 1px;
       position: absolute;
       top: 50%;
@@ -248,6 +250,7 @@
   }
 
   &--radio {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
@@ -259,8 +262,10 @@
   }
 
   &--checks {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     @media (min-width: var.$tablet-width) {
       & {
@@ -290,6 +295,7 @@
   display: flex;
   align-items: center;
   text-transform: none;
+  flex-grow: 1;
 }
 
 .feedback-form__fieldgroup-control-input {
