@@ -12,4 +12,11 @@
       padding: 0 60px;
     }
   }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 0;
+      justify-content: stretch;
+    }
+  }
 }

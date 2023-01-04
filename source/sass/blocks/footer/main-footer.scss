@@ -49,4 +49,16 @@
       transform: translate(-50%, -50%);
     }
   }
+
+  &:hover {
+    background-color: var.$button-primary-background-hover;
+  }
+
+  &:active {
+    background-color: var.$button-primary-background-active;
+  }
+
+  &:disabled {
+    background-color: var.$button-primary-background-disabled;
+  }
 }
