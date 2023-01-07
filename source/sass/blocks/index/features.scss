@@ -56,7 +56,7 @@
   }
 }
 
-.features__features-title {
+.features__title {
   @include mixin.font-title;
   color: var.$light-text-color;
   margin: 0;
@@ -65,14 +65,14 @@
   @include mixin.font-title;
 }
 
-.features__features-divider {
+.features__divider {
   @include mixin.font-description;
   color: var.$light-text-color;
   margin-top: 11px;
   margin-bottom: 17px;
 }
 
-.features__features-description {
+.features__description {
   @include mixin.font-description;
   color: var.$light-text-color;
 }
