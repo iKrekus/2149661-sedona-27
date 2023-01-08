@@ -2,10 +2,10 @@
 @use "../variables.scss" as var;
 
 .action-form {
-  padding: 38px 18px 49px;
-  display: flex;
+  padding: 41px 18px 49px;
+  /* display: flex;
   flex-direction: column;
-  row-gap: 32px;
+  row-gap: 21px; */
 
   @media (min-width: var.$tablet-width) {
     & {
@@ -21,7 +21,7 @@
 }
 
 .action-form__title {
-  @include mixin.font-title;
+  @include mixin.action-form-title;
   color: var.$primary-text-color;
   text-align: center;
 
@@ -37,6 +37,6 @@
 .action-form__description {
   @include mixin.font-description;
   color: var.$secondary-text-color;
-  padding-top: 16px;
+  padding: 20px 0 31px;
   text-align: center;
 }

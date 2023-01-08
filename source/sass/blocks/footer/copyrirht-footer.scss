@@ -2,7 +2,7 @@
 @use "../variables.scss" as var;
 
 .copyrirht-footer {
-  padding-top: 10px;
+  padding-top: 6px;
   text-align: center;
 }
 
@@ -10,9 +10,6 @@
   @include mixin.font-description;
   color: var.$primary-text-color;
 
-  & svg {
-    vertical-align: middle;
-  }
 
   &:hover {
     color: #81b3d2;
@@ -21,4 +18,8 @@
   &:disabled {
     color: var.$button-text-disabled;
   }
+}
+
+.copyrirht-footer__logo {
+  vertical-align: middle;
 }

@@ -7,11 +7,16 @@
   background-color: #81b3d2;
   text-align: center;
 
+  &--reverce .features-wrapper {
+    padding: 37px 20px 36px;
+  }
+
   @media (min-width: var.$tablet-width) {
     & {
       @include mixin.font-title;
       display: grid;
       grid-template-columns: 1fr 2fr;
+      align-items: center;
     }
 
     &--reverce {
@@ -37,15 +42,14 @@
 }
 
 .features-wrapper {
-  padding-top: 54px;
-  padding-bottom: 40px;
+  padding: 71px 20px 40px;
   box-sizing: border-box;
 
   @include mixin.font-title;
 
   @media (min-width: var.$tablet-width) {
     & {
-      padding: 52px 33px 31px;
+      padding: 51px 33px 33px;
     }
   }
 
@@ -68,8 +72,7 @@
 .features__divider {
   @include mixin.font-description;
   color: var.$light-text-color;
-  margin-top: 11px;
-  margin-bottom: 17px;
+  margin: 10px 0 25px;
 }
 
 .features__description {

@@ -3,6 +3,7 @@
 
 .button {
   @include mixin.primary-button;
+  display: block;
 
   &:hover {
     background-color: var.$button-primary-background-hover;
@@ -17,6 +18,10 @@
     background-color: var.$button-primary-background-disabled;
     color: var.$button-text-disabled;
   }
+}
+
+.button-serch {
+  @include mixin.action-form-button-title;
 }
 
 .video__button {

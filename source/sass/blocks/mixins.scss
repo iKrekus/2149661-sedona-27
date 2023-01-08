@@ -29,6 +29,48 @@
   }
 }
 
+@mixin action-form-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 30px;
+    line-height: 26px;
+  }
+}
+
+@mixin action-form-button-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 30px;
+    line-height: 26px;
+  }
+}
+
+@mixin main-footer-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 30px;
+    line-height: 26px;
+  }
+}
+
 @mixin page-title {
   font-weight: 700;
   font-size: 18px;
@@ -145,7 +187,7 @@
     & {
       width: var.$advantages-icon-width;
       height: var.$advantages-icon-height;
-      top: 60px;
+      top: 50px;
       left: 50%;
       transform: translateX(-50%);
     }

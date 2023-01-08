@@ -2,13 +2,13 @@
 @use "../variables.scss" as var;
 
 .main-footer {
-  padding: 45px 18px 22px;
+  padding: 35px 18px 22px;
   display: grid;
   row-gap: 33px;
 
   @media (min-width: var.$tablet-width) {
     & {
-      padding: 36px 0;
+      padding: 36px 60px;
       grid-template-columns: repeat(3, 1fr);
       align-items: center;
     }
@@ -16,7 +16,7 @@
 }
 
 .main-footer__title {
-  @include mixin.font-title;
+  @include mixin.main-footer-title;
   color: var.$primary-text-color;
   text-align: center;
 }
