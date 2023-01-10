@@ -15,7 +15,7 @@
 
   @media (min-width: var.$desktop-width) {
     & {
-      padding: 61px 382px 58px;
+      padding: 62px;
     }
   }
 }
@@ -39,4 +39,24 @@
   color: var.$secondary-text-color;
   padding: 20px 0 31px;
   text-align: center;
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 32px 0 41px;
+    }
+
+    & br {
+      display: inherit;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 34px 0 45px;
+    }
+  }
 }

@@ -2,10 +2,11 @@
 @use "../variables.scss" as var;
 
 .page-head-content {
-  padding: 30px 18px;
+  padding: 38px 18px 36px;
   display: flex;
   flex-direction: column;
-  row-gap: 37px;
+  row-gap: 26px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .page-head-content__title {

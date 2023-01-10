@@ -57,8 +57,7 @@
 }
 
 .hero-text-wrapper {
-  padding: 17px 30px;
-  padding-top: 33px;
+  padding: 34px 30px 16px;
   position: relative;
 
   @include mixin.font-title;
@@ -66,13 +65,14 @@
   @media (min-width: var.$tablet-width) {
     & {
       padding-bottom: 55px;
-      padding-top: 50px;
+      padding-top: 49px;
     }
   }
 
   @media (min-width: var.$desktop-width) {
     & {
       padding-top: 59px;
+      padding-bottom: 45px;
     }
   }
 }
@@ -94,10 +94,4 @@
       padding-top: 28px;
     }
   }
-
-/*   @media (min-width: var.$desktop-width) {
-    & {
-      padding-top: 59px;
-    }
-  } */
 }

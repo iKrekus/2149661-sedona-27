@@ -20,6 +20,7 @@
 
 .video__container {
   width: 100%;
+  max-height: 177px;
 
   @media (min-width: var.$desktop-width) {
     & {

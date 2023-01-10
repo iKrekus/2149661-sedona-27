@@ -52,7 +52,7 @@
   margin: 0;
 
   @media (min-width: var.$tablet-width) {
-    font-size: 30px;
+    font-size: 21px;
     line-height: 26px;
   }
 }
@@ -66,8 +66,15 @@
   margin: 0;
 
   @media (min-width: var.$tablet-width) {
-    font-size: 30px;
+    font-size: 21px;
     line-height: 26px;
+    padding-right: 22px;
+    padding-top: 10px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding-right: 10px;
+    padding-top: 7px;
   }
 }
 
@@ -187,9 +194,15 @@
     & {
       width: var.$advantages-icon-width;
       height: var.$advantages-icon-height;
-      top: 50px;
+      top: 54px;
       left: 50%;
       transform: translateX(-50%);
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      top: 65px;
     }
   }
 }

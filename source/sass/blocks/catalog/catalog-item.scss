@@ -121,6 +121,9 @@
 
 .catalog-item__button {
   text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
 
   &--like {
     color: #959494;
@@ -136,6 +139,7 @@
 .catalog-item__likes-counter {
   padding-top: 11px;
   display: flex;
+  align-items: center;
   justify-content: flex-start;
   column-gap: 14px;
 

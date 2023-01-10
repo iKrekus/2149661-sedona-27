@@ -8,9 +8,15 @@
 
   @media (min-width: var.$tablet-width) {
     & {
-      padding: 36px 60px;
-      grid-template-columns: repeat(3, 1fr);
+      padding: 30px 57px;
+      grid-template-columns: 1fr 2fr 1fr;
       align-items: center;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 35px 57px;
     }
   }
 }

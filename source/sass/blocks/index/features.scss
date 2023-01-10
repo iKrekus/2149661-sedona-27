@@ -8,7 +8,13 @@
   text-align: center;
 
   &--reverce .features-wrapper {
-    padding: 37px 20px 36px;
+    padding: 37px 20px 38px;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        padding: 40px 30px 30px;
+      }
+    }
   }
 
   @media (min-width: var.$tablet-width) {
@@ -31,6 +37,12 @@
           order: 2;
         }
       }
+
+      @media (min-width: var.$desktop-width) {
+        & {
+          padding: 30px;
+        }
+      }
     }
   }
 }
@@ -39,6 +51,12 @@
   display: block;
   object-fit: cover;
   width: 100%;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      max-height: 256px;
+    }
+  }
 }
 
 .features-wrapper {
@@ -49,13 +67,14 @@
 
   @media (min-width: var.$tablet-width) {
     & {
-      padding: 51px 33px 33px;
+      padding: 42px 33px 29px;
     }
   }
 
   @media (min-width: var.$desktop-width) {
     & {
       width: 400px;
+      padding: 30px 60px 25px;
     }
   }
 }
@@ -67,15 +86,58 @@
   padding: 0  20px;
 
   @include mixin.font-title;
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding-top: 12px;
+    }
+
+    & br {
+      display: inherit;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding-top: 0;
+    }
+  }
 }
 
 .features__divider {
   @include mixin.font-description;
   color: var.$light-text-color;
-  margin: 10px 0 25px;
+  padding-top: 11px;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      margin: 0;
+    }
+  }
 }
 
 .features__description {
   @include mixin.font-description;
   color: var.$light-text-color;
+  padding-top: 16px;
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding-top: 26px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & br {
+      display: inherit;
+    }
+  }
 }

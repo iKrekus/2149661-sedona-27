@@ -2,8 +2,20 @@
 @use "../variables.scss" as var;
 
 .advantages {
-  padding: 24px 32px 28px;
+  padding: 25px 32px 28px;
   background-color: #eeeeee;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 41px 0 28px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 0;
+    }
+  }
 
   &--pictured {
     padding: 23px 18px 46px;
@@ -13,12 +25,6 @@
       & {
         padding: 0;
       }
-    }
-  }
-
-  @media (min-width: var.$desktop-width) {
-    & {
-      padding: 0;
     }
   }
 }
@@ -41,9 +47,9 @@
 
   @media (min-width: var.$tablet-width) {
     & {
-
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      align-items: center;
     }
   }
 }
@@ -52,6 +58,10 @@
   position: relative;
   text-align: center;
   padding: 0;
+
+  &:last-child {
+    border: none;
+  }
 
   &::after {
     content: "";
@@ -67,20 +77,20 @@
     }
   }
 
-  &:last-child {
-    border: none;
-  }
-
   @media (min-width: var.$tablet-width) {
     & {
-      padding: 28px 15px 24px;
+      padding: 0 19px;
       border: none;
+    }
+
+    &::after {
+      display: none;
     }
   }
 
   @media (min-width: var.$desktop-width) {
     & {
-      padding: 63px 50px 41px;
+      padding: 64px 41px 28px;
       border: none;
     }
   }
@@ -92,15 +102,19 @@
     padding-top: 8px;
     border: none;
 
+    &::after {
+      display: none;
+    }
+
     @media (min-width: var.$tablet-width) {
       & {
-        padding: 152px 33px 60px;
+        padding: 158px 33px 48px;
       }
     }
 
     @media (min-width: var.$desktop-width) {
       & {
-        padding: 169px 50px 69px;
+        padding: 169px 50px 57px;
       }
     }
   }
@@ -150,10 +164,24 @@
   color: var.$secondary-text-color;
   padding-top: 16px;
 
+  & br {
+    display: none;
+  }
+
   @media (min-width: var.$tablet-width) {
     & {
       text-align: center;
-      padding: 23px 6px 10px;
+      padding: 24px 6px 14px;
+    }
+
+    & br {
+      display: inherit;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & br {
+      display: inherit;
     }
   }
 }

@@ -22,6 +22,7 @@
 
 .button-serch {
   @include mixin.action-form-button-title;
+  margin: 0 auto;
 }
 
 .video__button {
