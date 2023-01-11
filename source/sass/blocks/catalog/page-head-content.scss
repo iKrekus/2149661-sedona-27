@@ -7,6 +7,28 @@
   flex-direction: column;
   row-gap: 26px;
   border-bottom: 1px solid #e5e5e5;
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    padding: 66px 18px 36px;
+    row-gap: 33px;
+    border: none;
+
+    & br {
+      display: inherit;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 100px 18px 86px;
+
+    & br {
+      display: inherit;
+    }
+  }
 }
 
 .page-head-content__title {
@@ -19,4 +41,14 @@
   @include mixin.page-description;
   color: var.$primary-text-color;
   text-align: center;
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & br {
+      display: inherit;
+    }
+  }
 }

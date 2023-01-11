@@ -39,6 +39,12 @@
   padding: 0;
   z-index: 2;
 
+  @media (min-width: var.$tablet-width) {
+    & {
+      top: 24px;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;

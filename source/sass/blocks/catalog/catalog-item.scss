@@ -26,12 +26,17 @@
     &--current {
       width: 100%;
       max-width: none;
+
+      & .catalog-item__image {
+        min-height: 400px;
+      }
     }
   }
 
   @media (min-width: var.$desktop-width) {
     & {
       width: 33.3%;
+      height: 268px;
     }
 
     & .catalog-item__image {
@@ -44,6 +49,10 @@
 
       & .catalog-item__image {
         height: auto;
+      }
+
+      & .catalog-item-wrapper {
+        padding: 20px 22px 16px;
       }
     }
   }
@@ -142,6 +151,13 @@
   align-items: center;
   justify-content: flex-start;
   column-gap: 14px;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding-top: 0;
+      column-gap: 8px;
+    }
+  }
 
   @media (min-width: var.$desktop-width) {
     & {

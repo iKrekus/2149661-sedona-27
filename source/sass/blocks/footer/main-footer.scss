@@ -6,17 +6,25 @@
   display: grid;
   row-gap: 33px;
 
+  &--catalog {
+    padding: 22px 18px 22px;
+  }
+
   @media (min-width: var.$tablet-width) {
     & {
       padding: 30px 57px;
       grid-template-columns: 1fr 2fr 1fr;
       align-items: center;
     }
+
+    &--catalog {
+      padding: 54px 60px 36px;
+    }
   }
 
   @media (min-width: var.$desktop-width) {
     & {
-      padding: 35px 57px;
+      padding: 32px 118px;
     }
   }
 }

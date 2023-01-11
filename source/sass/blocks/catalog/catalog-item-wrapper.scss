@@ -3,4 +3,16 @@
 
 .catalog-item-wrapper {
   padding-top: 15px;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding-top: 22px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 21px 25px 17px;
+    }
+  }
 }
