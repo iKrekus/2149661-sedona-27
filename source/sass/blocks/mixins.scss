@@ -210,11 +210,12 @@
 
 //buttons
 @mixin primary-button {
+  font-family: "PT Sans", sans-serif;
   padding: 16px;
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 21px;
   line-height: 26px;
   text-decoration: none;
   border: none;

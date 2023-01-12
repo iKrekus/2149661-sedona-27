@@ -46,7 +46,7 @@
     display: none;
   }
 
-  @media (min-width: var.$desktop-width) {
+  @media (min-width: var.$tablet-width) {
     & br {
       display: inherit;
     }

@@ -14,7 +14,7 @@
     }
   }
 
-  @media (min-width: var.$tablet-width) {
+  @media (min-width: var.$desktop-width) {
     & {
       padding: 60px 0 0;
       row-gap: 0;

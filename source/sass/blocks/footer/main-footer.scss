@@ -10,6 +10,10 @@
     padding: 22px 18px 22px;
   }
 
+  &--form {
+    padding: 52px 18px 22px;
+  }
+
   @media (min-width: var.$tablet-width) {
     & {
       padding: 30px 57px;
@@ -19,6 +23,10 @@
 
     &--catalog {
       padding: 54px 60px 36px;
+    }
+
+    &--form {
+      padding: 80px 60px 35px;
     }
   }
 
