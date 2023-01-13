@@ -145,7 +145,7 @@
 
   &--textarea {
     @media (min-width: var.$tablet-width) {
-      padding-top: 31px;
+      padding-top: 37px;
     }
 
     @media (min-width: var.$desktop-width) {
@@ -305,7 +305,7 @@
 
     @media (min-width: var.$tablet-width) {
       & {
-        padding: 0 36px;
+        padding: 0 36px 7px;
       }
     }
 
@@ -323,7 +323,7 @@
 
     @media (min-width: var.$tablet-width) {
       & {
-        padding: 0 84px;
+        padding: 6px 84px;
       }
     }
 
@@ -342,7 +342,7 @@
 
   @media (min-width: var.$desktop-width) {
     &--textarea {
-      padding: 0 96px;
+      padding: 8px 96px;
     }
   }
 }
@@ -355,12 +355,6 @@
   display: flex;
   align-items: center;
   text-transform: none;
-
-/*   @media (min-width: var.$desktop-width) {
-    & {
-      min-width: 280px;
-    }
-  } */
 }
 
 .feedback-form__fieldgroup-control-input {
@@ -442,6 +436,11 @@
   padding: 16px;
   min-height: 116px;
 
+  &::placeholder {
+    color: #000000;
+    opacity: 0.3;
+  }
+
   @media (min-width: var.$tablet-width) {
     & {
       min-height: 10em;
@@ -472,7 +471,7 @@
 
   @media (min-width: var.$tablet-width) {
     & {
-      padding-top: 44px;
+      padding-top: 40px;
     }
   }
 
@@ -499,6 +498,7 @@
       margin: 0;
     }
   }
+
   &::after {
     font-family: inherit;
     content: "* — обязательные поля";

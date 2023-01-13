@@ -86,12 +86,20 @@
     &::after {
       display: none;
     }
+
+    &:nth-child(even) {
+      padding: 0 21px;
+    }
   }
 
   @media (min-width: var.$desktop-width) {
     & {
       padding: 64px 41px 28px;
       border: none;
+    }
+
+    &:nth-child(even) {
+      padding: 43px 41px 28px;
     }
   }
 
@@ -110,10 +118,18 @@
       & {
         padding: 158px 33px 48px;
       }
+
+      &:nth-child(even) {
+        padding: 158px 33px 48px;
+      }
     }
 
     @media (min-width: var.$desktop-width) {
       & {
+        padding: 169px 50px 57px;
+      }
+
+      &:nth-child(even) {
         padding: 169px 50px 57px;
       }
     }

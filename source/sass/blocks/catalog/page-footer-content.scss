@@ -40,15 +40,27 @@
   text-align: center;
   padding-bottom: 12px;
 
+  & br {
+    display: none;
+  }
+
   @media (min-width: var.$tablet-width) {
     & {
       padding: 0 160px 27px;
+    }
+
+    & br {
+      display: inherit;
     }
   }
 
   @media (min-width: var.$desktop-width) {
     & {
       padding: 0 160px 90px;
+
+      & br {
+        display: inherit;
+      }
     }
   }
 }

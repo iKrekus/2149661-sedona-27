@@ -12,14 +12,13 @@
 
   &--success {
     top: 67%;
-    /* display: none; */
+    display: none;
 
     @media (min-width: var.$tablet-width) {
       & {
         min-width: 640px;
         top: 40%;
         left: 50%;
-/*         transform: translateX(-50%, -40%); */
       }
     }
 
@@ -56,7 +55,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-/*   min-height: 280px; */
   box-sizing: border-box;
   padding: 50px 46px 32px;
 
@@ -95,8 +93,14 @@
 
 .modal__button {
   width: 100%;
-  font-size: 21px;
+  font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      font-size: 21px;
+    }
+  }
 
   &--error {
     border: none;
@@ -147,10 +151,16 @@
 
     @media (min-width: var.$tablet-width) {
       & {
-        padding: 0 40px;
+        padding: 0 40px 22px;
         font-size: 30px;
         line-height: 40px;
       }
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    &--error {
+      padding: 0 40px 26px;
     }
   }
 }
@@ -167,6 +177,10 @@
       & br {
         display: none;
       }
+    }
+
+    &--error {
+      padding-bottom: 48px;
     }
   }
 

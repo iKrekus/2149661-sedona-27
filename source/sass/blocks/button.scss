@@ -54,5 +54,12 @@
     top: 50%;
     transform: translate(-50%, -50%);
     background: url("../img/icons/play-button.png") no-repeat center center;
+
+    @media (min-width: var.$desktop-width) {
+      & {
+        top: 34%;
+        transform: translate(-50%);
+      }
+    }
   }
 }
