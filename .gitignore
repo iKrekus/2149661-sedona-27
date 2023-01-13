@@ -14,3 +14,5 @@ Thumbs.db
 .history/
 source/img/photo/.originals/
 source/img/photo/.other-resolutions/
+build/
+back/
