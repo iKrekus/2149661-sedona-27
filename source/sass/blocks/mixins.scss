@@ -169,11 +169,6 @@
   text-decoration: none;
   margin: 0;
   color: #000000;
-
-  &::placeholder {
-    color: #000000;
-    opacity: 0.3;
-  }
 }
 
 @mixin form-label {

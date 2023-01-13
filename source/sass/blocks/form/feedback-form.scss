@@ -437,6 +437,9 @@
   min-height: 116px;
 
   &::placeholder {
+    font-family: "PT Sans", sans-serif;
+
+    @include mixin.font-input;
     color: #000000;
     opacity: 0.3;
   }
@@ -456,13 +459,6 @@
       padding-top: 18px;
     }
   }
-}
-
-.feedback-form__textarea::placeholder {
-  font-family: "PT Sans", sans-serif;
-
-  @include mixin.font-input;
-  color: #aaaaaa;
 }
 
 .feedback-form__submit-wrapper {
