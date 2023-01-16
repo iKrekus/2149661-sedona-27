@@ -9,15 +9,15 @@
     & {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      row-gap: 48px;
       padding: 0 60px;
     }
   }
 
   @media (min-width: var.$desktop-width) {
     & {
+      grid-template-columns: 494px 467px;
       padding: 0 120px;
-      row-gap: 56px;
+      row-gap: 0;
     }
   }
 }
@@ -29,16 +29,25 @@
   row-gap: 24px;
   border-bottom: 1px solid #d6d6d6;
 
+  & br {
+    display: none;
+  }
+
   @media (min-width: var.$tablet-width) {
     & {
-      padding: 64px 166px 102px;
+      padding: 64px 30px 102px;
       border: none;
+    }
+
+    & br {
+      display: inherit;
     }
   }
 
   @media (min-width: var.$desktop-width) {
     & {
-      padding: 64px 356px 102px;
+      padding: 115px 30px 69px;
+      row-gap: 31px;
     }
   }
 }
@@ -53,51 +62,102 @@
   display: flex;
   flex-direction: column;
   row-gap: 16px;
+  padding-bottom: 24px;
 
   @media (min-width: var.$tablet-width) {
     &:first-of-type {
       border-right: 1px solid #d6d6d6;
-      padding-bottom: 15px;
     }
 
     & {
-      row-gap: 28px;
+      row-gap: 0;
+      padding-top: 3px;
     }
+  }
 
-    &--leftsided {
-      padding-right: 43px;
+  &--leftsided {
+    padding-bottom: 40px;
 
-      @media (min-width: var.$desktop-width) {
-        & {
-          padding-right: 63px;
-        }
+    @media (min-width: var.$tablet-width) {
+      padding-right: 8px;
+      padding-bottom: 15px;
+
+      & .feedback-form__fieldgroup-wrapper {
+        padding-right: 34px;
+        padding-bottom: 16px;
       }
     }
 
-    &--rightsided {
-      padding-left: 43px;
+    @media (min-width: var.$desktop-width) {
+      & .feedback-form__fieldgroup-wrapper {
+        padding-right: 54px;
+        padding-bottom: 16px;
+      }
 
-      @media (min-width: var.$desktop-width) {
-        & {
-          padding-left: 63px;
+      & .feedback-form__fieldgroup-title {
+        padding-left: 10px;
+      }
+    }
+  }
+
+  &--rightsided {
+    padding-bottom: 34px;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        padding: 0;
+        padding-bottom: 15px;
+      }
+
+      & .feedback-form__fieldgroup-wrapper {
+        padding-top: 5px;
+        padding-left: 44px;
+        padding-bottom: 10px;
+
+        @media (min-width: var.$desktop-width) {
+          & {
+            padding-left: 62px;
+          }
         }
       }
     }
+  }
 
-    &--fullwidth {
-      grid-column: 1 / -1;
-      position: relative;
+  &--fullwidth {
+    grid-column: 1 / -1;
+    position: relative;
+    padding-bottom: 24px;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        padding-top: 37px;
+        padding-bottom: 0;
+      }
     }
 
-    &--textarea {
-      @media (min-width: var.$tablet-width) {
-        padding-bottom: 64px;
+    @media (min-width: var.$desktop-width) {
+      & {
+        padding-top: 33px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  &--textarea {
+    @media (min-width: var.$tablet-width) {
+      padding-top: 37px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+      & {
+        padding-top: 37px;
+        padding-bottom: 72px;
       }
     }
   }
 }
 
-.feedback-form__fieldgroup-title-wrapper {
+.feedback-form__fieldgroup-title-wrapper .feedback-form__fieldgroup-title {
   position: relative;
 
   @media (min-width: var.$tablet-width) {
@@ -106,7 +166,7 @@
       min-width: 123px;
       height: 1px;
       position: absolute;
-      top: 50%;
+      top: calc(50% - 7px);
       transform: translateY(-50%);
       right: 0;
       background-color: #dbdbdb;
@@ -117,7 +177,7 @@
       min-width: 123px;
       height: 1px;
       position: absolute;
-      top: 50%;
+      top: calc(50% - 7px);
       transform: translateY(-50%);
       left: 0;
       background-color: #dbdbdb;
@@ -125,12 +185,16 @@
   }
 
   @media (min-width: var.$desktop-width) {
+    & {
+      padding: 6px 0 20px;
+    }
+
     &::after {
-      min-width: 240px;
+      min-width: 280px;
     }
 
     &::before {
-      min-width: 240px;
+      min-width: 280px;
     }
   }
 }
@@ -146,10 +210,12 @@
   color: var.$primary-text-color;
   text-align: center;
   padding-bottom: 4px;
+  display: block;
 
   @media (min-width: var.$tablet-width) {
     & {
       padding: 0;
+      padding-bottom: 26px;
     }
   }
 }
@@ -226,6 +292,12 @@
   display: flex;
   flex-direction: column;
 
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 0;
+    }
+  }
+
   &--list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -233,30 +305,44 @@
 
     @media (min-width: var.$tablet-width) {
       & {
-        padding: 0 36px;
+        padding: 0 36px 7px;
       }
     }
 
     @media (min-width: var.$desktop-width) {
       & {
-        padding: 31px 0;
+        padding: 25px 0;
+        padding-left: 53px;
       }
     }
   }
 
   &--checks {
     grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
-  }
+    column-gap: 30px;
 
-  @media (min-width: var.$desktop-width) {
-    &--textarea {
-      padding: 0 96px;
+    @media (min-width: var.$tablet-width) {
+      & {
+        padding: 6px 84px;
+      }
+    }
+
+    @media (min-width: var.$desktop-width) {
+      & {
+        padding: 40px 45px 34px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 64px;
+      }
     }
   }
 
   @media (min-width: var.$desktop-width) {
     &--textarea {
-      padding: 0 96px;
+      padding: 8px 96px;
     }
   }
 }
@@ -348,6 +434,15 @@
   background-color: #f2f2f2;
   border: none;
   padding: 16px;
+  min-height: 116px;
+
+  &::placeholder {
+    font-family: "PT Sans", sans-serif;
+
+    @include mixin.font-input;
+    color: #000000;
+    opacity: 0.3;
+  }
 
   @media (min-width: var.$tablet-width) {
     & {
@@ -357,24 +452,28 @@
 
   @media (min-width: var.$desktop-width) {
     & {
-      min-height: 10em;
+      min-width: 768px;
+      min-height: 12em;
+      margin: 0 auto;
+      box-sizing: border-box;
+      padding-top: 18px;
     }
   }
 }
 
-.feedback-form__textarea::placeholder {
-  font-family: "PT Sans", sans-serif;
-
-  @include mixin.font-input;
-  color: #aaaaaa;
-}
-
 .feedback-form__submit-wrapper {
   position: relative;
+  padding-top: 40px;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding-top: 40px;
+    }
+  }
 
   @media (min-width: var.$desktop-width) {
     & {
-      padding: 0 96px;
+      padding-left: 96px;
     }
   }
 }
@@ -384,11 +483,20 @@
 
   @media (min-width: var.$tablet-width) {
     & {
-      width: 50%;
+      max-width: 50%;
+      margin: 0;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      max-width: 384px;
+      margin: 0;
     }
   }
 
   &::after {
+    font-family: inherit;
     content: "* — обязательные поля";
     position: absolute;
     bottom: -26px;
@@ -397,11 +505,13 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 21px;
+    max-width: 280px;
 
     @media (min-width: var.$tablet-width) {
       & {
-        bottom: 20%;
+        bottom: 13px;
         right: 0;
+        font-size: 14px;
       }
     }
 

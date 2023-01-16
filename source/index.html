@@ -7,8 +7,8 @@
     <link rel="icon" href="./img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./img/favicosn/favicon-180.png"> <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="preload" href="/fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <title>HTML Academy: Седона</title>
   </head>
@@ -56,10 +56,9 @@
     <section class="features">
       <div class="features-wrapper">
         <h3 class="features__title">
-          НАСТОЯЩИЙ ГОРОДОК
+          НАСТОЯЩИЙ <br> ГОРОДОК
         </h3>
         <p class="features__divider">
-          <!--Далее будет сделан через псевдоэлемент Или потом будет выводится, как номер пункта в списке, если переделать features в список-->
           — №1 —
         </p>
         <p class="features__description">
@@ -90,7 +89,7 @@
             ЕДА
           </h3>
           <p class="advantages__description">
-            Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!
+            Всегда заказывайте ФИРМЕННЫЙ БУРГЕР,<br> Вы НЕ разочаруетесь!
           </p>
         </li>
         <li class="advantages__item advantages__item--pictured advantages__item--icon-souvenir">
@@ -98,7 +97,7 @@
             СУВЕНИРЫ
           </h3>
           <p class="advantages__description">
-            Не только китайского, но и местного производства!
+            Не только китайского, <br>но и местного производства!
           </p>
         </li>
       </ul>
@@ -106,14 +105,13 @@
     <section class="features features--reverce">
       <div class="features-wrapper">
         <h3 class="features__title">
-          Там есть Мост дьявола
+          Там есть <br> Мост дьявола
         </h3>
         <p class="features__divider">
-          <!--Далее будет сделан через псевдоэлемент Или потом будет выводится, как номер пункта в списке, если переделать features в список-->
           — №2 —
         </p>
         <p class="features__description">
-          Да, по нему можно пройти! Если вы осмелитесь, конечно
+          Да, по нему можно пройти! <br>Если вы осмелитесь, конечно
         </p>
       </div>
       <picture>
@@ -126,13 +124,12 @@
     </picture>
     </section>
     <section class="advantages">
-      <ol class="advantages__list">
+      <ul class="advantages__list">
         <li class="advantages__item">
           <h2 class="advantages__title">
             НЕБОЛЬШАЯ ПЛОЩАДЬ
           </h2>
           <p class="advantages__advantages-divider">
-            <!--Далее будет сделан через псевдоэлемент Или потом будет выводится, как номер пункта в списке, если переделать features в список-->
             — №3 —
           </p>
           <p class="advantages__description">
@@ -144,11 +141,10 @@
             КРАСИВАЯ ДОРОГА
           </h2>
           <p class="advantages__advantages-divider">
-            <!--Далее будет сделан через псевдоэлемент Или потом будет выводится, как номер пункта в списке, если переделать features в список-->
             — №4 —
           </p>
           <p class="advantages__description">
-            ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!
+            ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем <br>НЕ СКУЧНО!
           </p>
         </li>
         <li class="advantages__item">
@@ -156,18 +152,17 @@
             МАЛО ТУРИСТОВ
           </h2>
           <p class="advantages__advantages-divider">
-            <!--Далее будет сделан через псевдоэлемент Или потом будет выводится, как номер пункта в списке, если переделать features в список-->
             — №5 —
           </p>
           <p class="advantages__description">
-            Большинство едет в гранд каньони толпится там
+            Большинство едет в гранд каньон и толпится там
           </p>
         </li>
-      </ol>
+      </ul>
     </section>
     <section class="action-form">
       <h2 class="action-form__title">Заинтересовались?</h2>
-      <p class="action-form__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <p class="action-form__description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <a class="action-form__link button button-serch" href="#">Найти Гостиницу</a>
     </section>
     <div class="search-map">
@@ -200,10 +195,10 @@
           </a>
       </div>
         <div class="copyrirht-footer">
-          <a class="copyrirht-footer__link" href="https://htmlacademy.ru/">
-            Разарботанно
+          <a class="copyrirht-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+            Разработано
             <span class="visually-hidden">HTML Academy</span>
-            <svg width="27" height="34">
+            <svg class="copyrirht-footer__logo" width="27" height="34">
               <use href="img/sprite.svg#htmlacademy-icon"></use>
             </svg>
           </a>

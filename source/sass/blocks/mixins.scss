@@ -29,6 +29,54 @@
   }
 }
 
+@mixin action-form-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 30px;
+    line-height: 26px;
+  }
+}
+
+@mixin action-form-button-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+@mixin main-footer-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+    padding-top: 10px;
+    text-align: left;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding-top: 7px;
+  }
+}
+
 @mixin page-title {
   font-weight: 700;
   font-size: 18px;
@@ -120,6 +168,7 @@
   line-height: 26px;
   text-decoration: none;
   margin: 0;
+  color: #000000;
 }
 
 @mixin form-label {
@@ -145,9 +194,15 @@
     & {
       width: var.$advantages-icon-width;
       height: var.$advantages-icon-height;
-      top: 60px;
+      top: 54px;
       left: 50%;
       transform: translateX(-50%);
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      top: 65px;
     }
   }
 }
@@ -156,11 +211,12 @@
 
 //buttons
 @mixin primary-button {
+  font-family: "PT Sans", sans-serif;
   padding: 16px;
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 21px;
   line-height: 26px;
   text-decoration: none;
   border: none;
