@@ -11,4 +11,8 @@ npm-debug.*
 source/css/*.css
 source/css/*.map
 Thumbs.db
+source/img/photo/.originals/
+source/img/photo/.other-resolutions/
+build/
+back/
 .history/

@@ -2,8 +2,100 @@
 @use "../variables.scss" as var;
 
 .catalog-item {
-  padding: 24px 18px 25px;
   border-bottom: 1px solid #d6d6d6;
+  position: relative;
+
+  &--current .catalog-item__image {
+    max-width: none;
+  }
+
+  &--current {
+    width: 100%;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      width: 50%;
+      border: none;
+    }
+
+    & .catalog-item__image {
+      height: 267px;
+    }
+
+    &--current {
+      width: 100%;
+      max-width: none;
+
+      & .catalog-item__image {
+        min-height: 400px;
+      }
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      width: 33.3%;
+      height: 268px;
+    }
+
+    & .catalog-item__image {
+      height: 100%;
+    }
+
+    &--current {
+      width: 100%;
+      height: 400px;
+
+      & .catalog-item__image {
+        height: auto;
+      }
+
+      & .catalog-item-wrapper {
+        padding: 20px 19px 16px 22px;
+      }
+    }
+  }
+
+  &:nth-child(2n+3) .catalog-item-wrapper {
+    background-color: transparent;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        background-color: #f2f2f2;
+      }
+    }
+
+    @media (min-width: var.$desktop-width) {
+      & {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
+
+.catalog-item-wrapper {
+  display: block;
+  box-sizing: border-box;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      display: flex;
+      justify-content: space-between;
+      padding: 22px 20px 15px;
+      background-color: #eaeaea;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
 }
 
 .catalog-item__title {
@@ -13,6 +105,12 @@
   margin: 0;
   text-transform: uppercase;
   color: var.$primary-text-color;
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      color: var.$light-text-color;
+    }
+  }
 }
 
 .catalog-item__description {
@@ -21,19 +119,67 @@
   line-height: 21px;
   margin: 0;
   color: var.$secondary-text-color;
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      color: var.$light-text-color;
+    }
+  }
 }
 
 .catalog-item__button {
   text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
 
   &--like {
     color: #959494;
+
+    @media (min-width: var.$desktop-width) {
+      & {
+        color: var.$light-text-color;
+      }
+    }
   }
 }
 
 .catalog-item__likes-counter {
   padding-top: 11px;
   display: flex;
+  align-items: center;
   justify-content: flex-start;
   column-gap: 14px;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding-top: 0;
+      column-gap: 8px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      color: var.$light-text-color;
+    }
+  }
+}
+
+.catalog-item__image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-width: 324px;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      max-width: 100%;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      height: 100%;
+    }
+  }
 }

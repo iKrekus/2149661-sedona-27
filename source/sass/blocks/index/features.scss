@@ -6,27 +6,138 @@
   flex-direction: column;
   background-color: #81b3d2;
   text-align: center;
+
+  &--reverce .features-wrapper {
+    padding: 37px 20px 38px;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        padding: 40px 30px 30px;
+      }
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      @include mixin.font-title;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+    }
+
+    &--reverce {
+      grid-template-columns: 2fr 1fr;
+    }
+
+    &--reverce .features-wrapper {
+      order: 0;
+
+      @media (min-width: var.$tablet-width) {
+        & {
+          order: 2;
+        }
+      }
+
+      @media (min-width: var.$desktop-width) {
+        & {
+          padding: 30px;
+        }
+      }
+    }
+  }
+}
+
+.features__image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      max-height: 256px;
+    }
+  }
 }
 
 .features-wrapper {
-  padding-top: 54px;
-  padding-bottom: 40px;
+  padding: 71px 20px 40px;
+  box-sizing: border-box;
+
+  @include mixin.font-title;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 42px 33px 29px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      width: 400px;
+      padding: 30px 60px 25px;
+    }
+  }
 }
 
-.features__features-title {
-  @include mixin.font-title-mob;
+.features__title {
+  @include mixin.font-title;
   color: var.$light-text-color;
   margin: 0;
+  padding: 0  20px;
+
+  @include mixin.font-title;
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding-top: 12px;
+    }
+
+    & br {
+      display: inherit;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding-top: 0;
+    }
+  }
 }
 
-.features__features-divider {
-  @include mixin.font-description-mob;
+.features__divider {
+  @include mixin.font-description;
   color: var.$light-text-color;
-  margin-top: 11px;
-  margin-bottom: 17px;
+  padding-top: 11px;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      margin: 0;
+    }
+  }
 }
 
-.features__features-description {
-  @include mixin.font-description-mob;
+.features__description {
+  @include mixin.font-description;
   color: var.$light-text-color;
+  padding-top: 16px;
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding-top: 26px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & br {
+      display: inherit;
+    }
+  }
 }

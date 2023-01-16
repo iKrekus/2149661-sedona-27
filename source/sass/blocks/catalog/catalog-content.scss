@@ -1,0 +1,22 @@
+@use "../mixins.scss" as mixin;
+@use "../variables.scss" as var;
+
+.catalog-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      flex-wrap: wrap;
+      padding: 45px 60px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 0;
+      justify-content: stretch;
+    }
+  }
+}

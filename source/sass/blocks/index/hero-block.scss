@@ -9,7 +9,32 @@
     display: block;
     min-height: 389px;
     width: 100%;
-    background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center 51px, #d3e4ee url("../img/bacgrounds/background-hero-mobile.jpg") no-repeat center;
+    background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center 91px, #d3e4ee url("../img/bacgrounds/background-hero-mobile@1x.jpg") no-repeat center;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center 91px, #d3e4ee url("../img/bacgrounds/background-hero-mobile@2x.jpg") no-repeat center / cover;
+    }
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        min-height: 518px;
+        background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center 76px / 461px, #d3e4ee url("../img/bacgrounds/background-hero-desktop@1x.jpg") no-repeat center;
+
+        @media (min-resolution: 2dppx) {
+          background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center 76px / 461px, #d3e4ee url("../img/bacgrounds/background-hero-desktop@2x.jpg") no-repeat center / cover;
+        }
+      }
+    }
+
+    @media (min-width: var.$desktop-width) {
+      & {
+        background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center 76px / 459px, #d3e4ee url("../img/bacgrounds/background-hero-desktop@1x.jpg") no-repeat center;
+
+        @media (min-resolution: 2dppx) {
+          background: url("../img/bacgrounds/divider.svg") no-repeat center bottom, url("../img/bacgrounds/hero-title.svg") no-repeat center 76px / 459px, #d3e4ee url("../img/bacgrounds/background-hero-desktop@2x.jpg") no-repeat center / cover;
+        }
+      }
+    }
   }
 
   &::after {
@@ -20,24 +45,53 @@
     bottom: -37px;
     width: 100%;
     background: url("../img/bacgrounds/divider-bottom.svg") no-repeat center bottom;
+    background-size: cover;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    &::after {
+      @include mixin.font-title;
+      display: none;
+    }
   }
 }
 
 .hero-text-wrapper {
-  padding: 0 30px;
-  padding-top: 32px;
+  padding: 34px 30px 16px;
   position: relative;
+
+  @include mixin.font-title;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding-bottom: 55px;
+      padding-top: 49px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding-top: 59px;
+      padding-bottom: 45px;
+    }
+  }
 }
 
 .hero-block__title {
-  @include mixin.font-title-mob;
+  @include mixin.font-title;
   color: var.$primary-text-color;
   text-align: center;
 }
 
 .hero-block__description {
-  @include mixin.font-description-mob;
+  @include mixin.font-description;
   color: var.$secondary-text-color;
   padding-top: 35px;
   text-align: center;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding-top: 28px;
+    }
+  }
 }

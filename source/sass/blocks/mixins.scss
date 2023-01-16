@@ -1,16 +1,96 @@
 @use "variables.scss" as var;
 
 //Mixins for text
-@mixin font-title-mob {
+@mixin font-nav {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
   text-decoration: none;
   margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 14px;
+    line-height: 21px;
+  }
 }
 
-@mixin font-description-mob {
+@mixin font-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+@mixin action-form-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 30px;
+    line-height: 26px;
+  }
+}
+
+@mixin action-form-button-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+@mixin main-footer-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+    padding-top: 10px;
+    text-align: left;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding-top: 7px;
+  }
+}
+
+@mixin page-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 30px;
+  }
+}
+
+@mixin page-description {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -19,15 +99,79 @@
   margin: 0;
 }
 
-@mixin font-input-mob {
+@mixin font-description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+}
+
+@mixin feedback-form__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 30px;
+  }
+}
+
+@mixin feedback-form__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@mixin feedback-form__fieldgroup-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 30px;
+  }
+}
+
+@mixin feedback-form__fieldgroup-description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    line-height: 21px;
+  }
+}
+
+@mixin font-input {
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   text-decoration: none;
   margin: 0;
+  color: #000000;
 }
 
-@mixin form-label-mob {
+@mixin form-label {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -38,28 +182,49 @@
 
 //Mixins to blocks
 
-@mixin advantages-icon-mob {
+@mixin advantages-icon {
   content: "";
-  width: var.$advantages-icon-width;
-  height: var.$advantages-icon-height;
+  width: var.$advantages-icon-width-mob;
+  height: var.$advantages-icon-height-mob;
   position: absolute;
   top: 0;
   left: 0;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      width: var.$advantages-icon-width;
+      height: var.$advantages-icon-height;
+      top: 54px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      top: 65px;
+    }
+  }
 }
+
 //Vertical middle centred block
 
 //buttons
 @mixin primary-button {
+  font-family: "PT Sans", sans-serif;
   padding: 16px;
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 21px;
   line-height: 26px;
   text-decoration: none;
   border: none;
   color: var.$light-text-color;
   background-color: var.$button-primary-background;
+  box-sizing: border-box;
+  width: 284px;
+  margin: 0 auto;
 
   &:hover {
     background-color: var.$button-primary-background-hover;
@@ -71,5 +236,12 @@
 
   &:disabled {
     background-color: var.$button-primary-background-disabled;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      font-size: 21px;
+      width: 458px;
+    }
   }
 }

@@ -2,12 +2,30 @@
 @use "../variables.scss" as var;
 
 .advantages {
-  padding: 24px 18px 28px;
+  padding: 25px 32px 28px;
   background-color: #eeeeee;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 41px 0 28px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 0;
+    }
+  }
 
   &--pictured {
     padding: 23px 18px 46px;
     background: none;
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        padding: 0;
+      }
+    }
   }
 }
 
@@ -15,23 +33,74 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 52px;
 
   &--pictured {
-    display: flex;
-    flex-direction: column;
-    row-gap: 28px;
+    row-gap: 25px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+    }
   }
 }
 
 .advantages__item {
   position: relative;
   text-align: center;
-  padding: 8px;
-  padding-bottom: 29px;
-  border-bottom: 1px solid #d6d6d6;
+  padding: 0;
 
   &:last-child {
     border: none;
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #d6d6d6;
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+
+    &:last-child {
+      display: none;
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 0 19px;
+      border: none;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &:nth-child(even) {
+      padding: 0 21px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 64px 41px 28px;
+      border: none;
+    }
+
+    &:nth-child(even) {
+      padding: 43px 41px 28px;
+    }
   }
 
   &--pictured {
@@ -40,20 +109,44 @@
     padding-left: 47px;
     padding-top: 8px;
     border: none;
+
+    &::after {
+      display: none;
+    }
+
+    @media (min-width: var.$tablet-width) {
+      & {
+        padding: 158px 33px 48px;
+      }
+
+      &:nth-child(even) {
+        padding: 158px 33px 48px;
+      }
+    }
+
+    @media (min-width: var.$desktop-width) {
+      & {
+        padding: 169px 50px 57px;
+      }
+
+      &:nth-child(even) {
+        padding: 169px 50px 57px;
+      }
+    }
   }
 
   &--icon-housing::before {
-    @include mixin.advantages-icon-mob;
+    @include mixin.advantages-icon;
     background: url("../img/icons/advantages-housing.svg") no-repeat center/contain;
   }
 
   &--icon-food::before {
-    @include mixin.advantages-icon-mob;
+    @include mixin.advantages-icon;
     background: url("../img/icons/advantages-food.svg") no-repeat center/contain;
   }
 
   &--icon-souvenir::before {
-    @include mixin.advantages-icon-mob;
+    @include mixin.advantages-icon;
     background: url("../img/icons/advantages-souvenir.svg") no-repeat center/contain;
   }
 }
@@ -65,17 +158,51 @@
 }
 
 .advantages__title {
-  @include mixin.font-title-mob;
+  @include mixin.font-title;
   color: var.$primary-text-color;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 0 30px;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 0 80px;
+    }
+  }
 }
 
 .advantages__description {
-  @include mixin.font-description-mob;
+  @include mixin.font-description;
   color: var.$secondary-text-color;
   padding-top: 16px;
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      text-align: center;
+      padding: 24px 6px 14px;
+    }
+
+    & br {
+      display: inherit;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & br {
+      display: inherit;
+    }
+  }
 }
 
 .advantages__advantages-divider {
-  margin-top: 23px;
-  margin-bottom: 12px;
+  margin: 0;
+  padding-top: 11px;
 }
