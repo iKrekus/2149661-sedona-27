@@ -17,7 +17,8 @@
   color: var.$primary-text-color;
 
 
-  &:hover {
+  &:hover,
+  &:hover .copyrirht-footer__logo{
     color: #81b3d2;
   }
 
