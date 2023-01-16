@@ -2,14 +2,22 @@
 @use "../variables.scss" as var;
 
 .page-footer-content {
-  padding: 30px 18px 0;
+  padding: 13px 22px 5px;
   display: flex;
   flex-direction: column;
-  row-gap: 37px;
+  row-gap: 27px;
 
   @media (min-width: var.$tablet-width) {
     & {
-      padding: 57px 0 40px;
+      padding: 14px 0 0;
+      row-gap: 0;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 60px 0 0;
+      row-gap: 0;
     }
   }
 }
@@ -18,22 +26,41 @@
   @include mixin.page-title;
   color: var.$primary-text-color;
   text-align: center;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 0 1em 1em;
+    }
+  }
 }
 
 .page-footer-content__description {
   @include mixin.page-description;
   color: var.$primary-text-color;
   text-align: center;
+  padding-bottom: 12px;
+
+  & br {
+    display: none;
+  }
 
   @media (min-width: var.$tablet-width) {
     & {
-      padding: 0 160px;
+      padding: 0 160px 27px;
+    }
+
+    & br {
+      display: inherit;
     }
   }
 
   @media (min-width: var.$desktop-width) {
     & {
-      padding: 0 160px;
+      padding: 0 160px 90px;
+
+      & br {
+        display: inherit;
+      }
     }
   }
 }
