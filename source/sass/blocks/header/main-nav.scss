@@ -73,6 +73,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      flex-direction: row;
+    }
+  }
 }
 
 .main-nav--nojs .main-nav__toggle {
@@ -133,7 +139,7 @@
 .main-nav__item {
   @include mixin.font-nav;
   text-align: center;
-  padding: 18px 20px 17px;
+  padding: 18px 20px 10px;
   box-sizing: border-box;
   color: var.$light-text-color;
   border-top: 1px solid #aecee2;
@@ -147,6 +153,7 @@
       background: none;
       border: none;
       min-width: 153px;
+      padding: 19px 20px 16px;
     }
   }
 
@@ -226,11 +233,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
 
   @media (min-width: var.$tablet-width) {
     & {
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: flex-start;
+      max-width: 480px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      min-width: 480px;
     }
   }
 }
