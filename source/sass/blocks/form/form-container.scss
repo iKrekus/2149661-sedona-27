@@ -4,3 +4,46 @@
 .form-container {
   background-color: var.$light-page-backround-color;
 }
+
+
+.form-container__header {
+  padding: 36px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  border-bottom: 1px solid #d6d6d6;
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 64px 30px 102px;
+      border: none;
+    }
+
+    & br {
+      display: inherit;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      padding: 115px 30px 69px;
+      row-gap: 31px;
+    }
+  }
+}
+
+.form-container__title {
+  @include mixin.feedback-form__title;
+  color: var.$primary-text-color;
+  text-align: center;
+}
+
+.form-container__description {
+  @include mixin.font-description;
+  color: var.$secondary-text-color;
+  text-align: center;
+}

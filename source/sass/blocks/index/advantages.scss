@@ -74,6 +74,10 @@
   }
 
   @media (min-width: var.$tablet-width) {
+    &::after {
+      display: none;
+    }
+
     & {
       padding: 0 19px;
       border: none;

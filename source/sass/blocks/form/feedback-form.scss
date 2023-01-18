@@ -130,7 +130,7 @@
 
     @media (min-width: var.$tablet-width) {
       & {
-        padding-top: 37px;
+        padding-top: 38px;
         padding-bottom: 0;
       }
     }
@@ -407,7 +407,7 @@
   }
 
   &--checkbox:active::before {
-    background-color:  var.$button-checkbox-background-active;
+    background-color: var.$button-checkbox-background-active;
   }
 
   &--checkbox:checked::before {
@@ -419,7 +419,7 @@
   }
 
   &--checkbox:checked:active::before {
-    background:  var.$button-checkbox-background-active url("../img/icons/check.svg") no-repeat center;
+    background: var.$button-checkbox-background-active url("../img/icons/check.svg") no-repeat center;
     opacity: 0.6;
   }
 }
@@ -459,16 +459,22 @@
 .feedback-form__submit-wrapper {
   position: relative;
   padding-top: 40px;
+  text-align: right;
+
 
   @media (min-width: var.$tablet-width) {
     & {
-      padding-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
     }
   }
 
   @media (min-width: var.$desktop-width) {
     & {
       padding-left: 96px;
+      padding-right: 96px;
     }
   }
 }
@@ -489,33 +495,30 @@
       margin: 0;
     }
   }
+}
 
-  &::after {
-    font-family: inherit;
-    content: "* — обязательные поля";
-    position: absolute;
-    bottom: -26px;
-    right: 0;
-    color: var.$secondary-text-color;
-    opacity: 0.6;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 21px;
-    max-width: 280px;
+.feedback-form__submit-description {
+  font-family: inherit;
+  color: var.$secondary-text-color;
+  opacity: 0.6;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin: 0;
 
-    @media (min-width: var.$tablet-width) {
-      & {
-        opacity: 1;
-        bottom: 13px;
-        right: 0;
-        font-size: 14px;
-      }
+  @media (min-width: var.$tablet-width) {
+    & {
+      opacity: 1;
+      bottom: 13px;
+      right: 0;
+      font-size: 14px;
     }
+  }
 
-    @media (min-width: var.$desktop-width) {
-      & {
-        right: 96px;
-      }
+  @media (min-width: var.$desktop-width) {
+    & {
+      right: 96px;
     }
   }
 }

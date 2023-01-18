@@ -11,3 +11,13 @@
 .search-map__map {
   width: 100%;
 }
+
+.search-map--nojs {
+  background: #e3ecc7 url(../img/photo/map-mobile.jpg) no-repeat center center/cover;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      background: #e6ecca url(../img/photo/map-desktop.jpg) no-repeat center center/cover;
+    }
+  }
+}

@@ -7,7 +7,7 @@
   background-color: #81b3d2;
   text-align: center;
 
-  &--reverce .features-wrapper {
+  &--reverce .features__wrapper {
     padding: 37px 20px 38px;
 
     @media (min-width: var.$tablet-width) {
@@ -29,7 +29,7 @@
       grid-template-columns: 2fr 1fr;
     }
 
-    &--reverce .features-wrapper {
+    &--reverce .features__wrapper {
       order: 0;
 
       @media (min-width: var.$tablet-width) {
@@ -43,6 +43,26 @@
           padding: 30px;
         }
       }
+    }
+  }
+}
+
+.features__wrapper {
+  padding: 71px 20px 40px;
+  box-sizing: border-box;
+
+  @include mixin.font-title;
+
+  @media (min-width: var.$tablet-width) {
+    & {
+      padding: 42px 33px 29px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      width: 400px;
+      padding: 30px 60px 25px;
     }
   }
 }
@@ -121,3 +141,5 @@
     }
   }
 }
+
+

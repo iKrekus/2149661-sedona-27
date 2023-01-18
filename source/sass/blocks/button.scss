@@ -23,42 +23,51 @@
     @include mixin.action-form-button-title;
     margin: 0 auto;
   }
-}
-
-.button__video {
-  width: 100%;
-  max-width: 800px;
-  height: 100%;
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0;
-  z-index: 2;
-
-  @media (min-width: var.$tablet-width) {
-    & {
-      top: 24px;
-    }
-  }
-
-  &::before {
-    content: "";
+  &--video {
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
     position: absolute;
-    width: 48px;
-    height: 54px;
+    top: 0;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: url("../img/icons/play-button.png") no-repeat center center;
+    transform: translateX(-50%);
+    padding: 0;
+    z-index: 2;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    box-sizing: border-box;
+    margin: 0;
 
-    @media (min-width: var.$desktop-width) {
+    &:hover {
+      background: none;
+    }
+
+    @media (min-width: var.$tablet-width) {
       & {
-        top: 34%;
-        transform: translate(-50%);
+        top: 24px;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 48px;
+      height: 54px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: url("../img/icons/play-button.png") no-repeat center center;
+
+      @media (min-width: var.$desktop-width) {
+        & {
+          top: 34%;
+          transform: translate(-50%);
+        }
       }
     }
   }

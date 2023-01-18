@@ -5,14 +5,13 @@
   padding: 35px 18px 22px;
   display: grid;
   row-gap: 33px;
-  gap: 4px;
 
   &--catalog {
     padding: 22px 18px 22px;
   }
 
   &--form {
-    padding: 52px 18px 22px;
+    padding: 34px 18px 22px;
   }
 
   @media (min-width: var.$tablet-width) {
