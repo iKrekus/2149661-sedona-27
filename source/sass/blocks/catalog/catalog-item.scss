@@ -74,30 +74,6 @@
   }
 }
 
-
-.catalog-item-wrapper {
-  display: block;
-  box-sizing: border-box;
-
-  @media (min-width: var.$tablet-width) {
-    & {
-      display: flex;
-      justify-content: space-between;
-      padding: 22px 20px 15px;
-      background-color: #eaeaea;
-    }
-  }
-
-  @media (min-width: var.$desktop-width) {
-    & {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-  }
-}
-
 .catalog-item__title {
   font-weight: 700;
   font-size: 14px;

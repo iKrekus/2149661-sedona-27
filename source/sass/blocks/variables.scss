@@ -5,9 +5,10 @@ $mobile-witdh-obly: 767px;
 
 //Variable colors
 $primary-text-color: #000000;
-$primary-text-color-hover: #81b3d2;
-$primary-text-color-active: rgba(0, 0, 0, 0.3);
-$primary-text-color-disabled: #766357;
+$primary-link-color-hover: #81b3d2;
+$primary-link-color-active: rgba(0, 0, 0, 0.3);
+$primary-link-color-disabled: #766357;
+$primary-link-color-current: #766357;
 $secondary-text-color: #333333;
 $light-text-color: #ffffff;
 
@@ -21,8 +22,22 @@ $button-primary-background-active: #5496bd;
 $button-primary-background-disabled: #e5e5e5;
 $button-text-active: rgba(255, 255, 255, 0.3);
 $button-text-disabled: rgba(255, 255, 255, 0.3);
+$button-checkbox-background: #f2f2f2;
+$button-checkbox-background-hover: #e5e5e5;
+$button-checkbox-background-active: #d5d5d5;
+$button-checkbox-background-disabled: #e5e5e5;
+$button-radio-background: #f2f2f2;
+$button-radio-background-hover: #e5e5e5;
+$button-radio-background-active: #d5d5d5;
+$button-radio-background-disabled: #e5e5e5;
+$button-radio-check-dot: #333333;
+$button-radio-check-dot-active: rgba(51, 51, 51, 0.3);
 
 $input-primary-backhround: #f2f2f2;
+$input-primary-backhround-hover: #e5e5e5;
+$input-primary-backhround-active: #ffffff;
+$input-primary-backhround-disabled: #f2f2f2;
+$input-primary-backhround-placeholder: #aaaaaa;
 
 //Pictures
 $advantages-icon-width: 80px;

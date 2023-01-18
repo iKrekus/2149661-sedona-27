@@ -1,0 +1,35 @@
+@use "mixins.scss" as mixin;
+@use "variables.scss" as var;
+
+.page {
+  font-family: "PT Sans", "Arial", sans-serif;
+  background-color: var.$light-page-backround-color;
+  height: 100%;
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      background-color: var.$darck-page-backround-color;
+    }
+  }
+}
+
+.page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  min-height: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: var.$light-page-backround-color;
+
+  @media (min-width: var.$tablet-width) {
+    min-width: var.$tablet-width;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      width: var.$desktop-width;
+      box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+      grid-template-columns: 1200px;
+    }
+  }
+}

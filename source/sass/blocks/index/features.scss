@@ -59,26 +59,6 @@
   }
 }
 
-.features-wrapper {
-  padding: 71px 20px 40px;
-  box-sizing: border-box;
-
-  @include mixin.font-title;
-
-  @media (min-width: var.$tablet-width) {
-    & {
-      padding: 42px 33px 29px;
-    }
-  }
-
-  @media (min-width: var.$desktop-width) {
-    & {
-      width: 400px;
-      padding: 30px 60px 25px;
-    }
-  }
-}
-
 .features__title {
   @include mixin.font-title;
   color: var.$light-text-color;

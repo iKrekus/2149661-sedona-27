@@ -162,7 +162,7 @@
 }
 
 @mixin font-input {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -211,7 +211,7 @@
 
 //buttons
 @mixin primary-button {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   padding: 16px;
   text-align: center;
   text-transform: uppercase;

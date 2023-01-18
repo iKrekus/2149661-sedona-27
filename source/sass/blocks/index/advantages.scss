@@ -27,29 +27,25 @@
       }
     }
   }
-}
 
-.advantages__list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  row-gap: 52px;
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 52px;
 
-  &--pictured {
-    row-gap: 25px;
-
-    &::after {
-      display: none;
+    &--pictured {
+      row-gap: 25px;
     }
-  }
 
-  @media (min-width: var.$tablet-width) {
-    & {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      align-items: center;
+    @media (min-width: var.$tablet-width) {
+      & {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+      }
     }
   }
 }
@@ -81,10 +77,6 @@
     & {
       padding: 0 19px;
       border: none;
-    }
-
-    &::after {
-      display: none;
     }
 
     &:nth-child(even) {
@@ -151,12 +143,6 @@
   }
 }
 
-.advantages-wrapper {
-  padding: 0 30px;
-  padding-top: 32px;
-  position: relative;
-}
-
 .advantages__title {
   @include mixin.font-title;
   color: var.$primary-text-color;
@@ -205,4 +191,5 @@
 .advantages__advantages-divider {
   margin: 0;
   padding-top: 11px;
+  color: var.$secondary-text-color;
 }

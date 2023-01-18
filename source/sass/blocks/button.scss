@@ -18,14 +18,14 @@
     background-color: var.$button-primary-background-disabled;
     color: var.$button-text-disabled;
   }
+
+  &--search {
+    @include mixin.action-form-button-title;
+    margin: 0 auto;
+  }
 }
 
-.button-serch {
-  @include mixin.action-form-button-title;
-  margin: 0 auto;
-}
-
-.video__button {
+.button__video {
   width: 100%;
   max-width: 800px;
   height: 100%;

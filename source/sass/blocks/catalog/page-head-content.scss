@@ -39,7 +39,7 @@
 
 .page-head-content__description {
   @include mixin.page-description;
-  color: var.$primary-text-color;
+  color: var.$secondary-text-color;
   text-align: center;
 
   & br {

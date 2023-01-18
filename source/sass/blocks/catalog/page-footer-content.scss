@@ -36,7 +36,7 @@
 
 .page-footer-content__description {
   @include mixin.page-description;
-  color: var.$primary-text-color;
+  color: var.$secondary-text-color;
   text-align: center;
   padding-bottom: 12px;
 

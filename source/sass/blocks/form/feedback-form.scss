@@ -225,7 +225,7 @@
   padding-left: 16px;
 
   @include mixin.form-label;
-  color: var.$primary-text-color;
+  color: var.$secondary-text-color;
 }
 
 .feedback-form__input {
@@ -242,35 +242,23 @@
 
   &::placeholder {
     @include mixin.font-input;
-    color: #aaaaaa;
+    color: var.$input-primary-backhround-placeholder;
   }
 
   &:hover {
-    background-color: darken(var.$input-primary-backhround, 5%);
+    background-color: var.$input-primary-backhround-hover;
   }
 
   &:active,
   &:focus {
     outline: none;
     box-shadow: inset 0 0 0 4px #e5e5e5;
-    background-color: #ffffff;
-  }
-}
-
-.feedback-form-input-wrapper {
-  display: flex;
-
-  &:active,
-  &:focus-within {
-    outline: none;
-    box-shadow: inset 0 0 0 4px #e5e5e5;
-    background-color: #ffffff;
+    background-color: var.$input-primary-backhround-active;
   }
 
-  &:focus .feedback-form__input,
-  &:focus-within .feedback-form__input {
-    box-shadow: none;
-    background: none;
+  &:disabled {
+    background-color: var.$input-primary-backhround-disabled;
+    opacity: 0.3;
   }
 }
 
@@ -368,33 +356,39 @@
   cursor: pointer;
   color: var.$primary-text-color;
 
+  &:disabled::before {
+    background-color: var.$button-primary-background-disabled;
+    color: var.$button-text-disabled;
+    opacity: 0.3;
+  }
+
   &--radio::before {
     content: "";
     display: block;
     width: 46px;
     height: 46px;
-    background-color: #f2f2f2;
+    background-color: var.$button-radio-background;
     border-radius: 50%;
   }
 
   &--radio:hover::before {
-    background-color: darken(#f2f2f2, 5%);
+    background-color: var.$button-radio-background-hover;
   }
 
   &--radio:active::before {
-    background-color: darken(#f2f2f2, 8%);
+    background-color: var.$button-radio-background;
   }
 
   &--radio:checked::before {
-    background: radial-gradient(#000000 8px, #f1f1f1 8px);
+    background: radial-gradient(var.$button-radio-check-dot 8px, var.$button-radio-background 8px);
   }
 
   &--radio:checked:hover::before {
-    background: radial-gradient(#000000 8px, darken(#f1f1f1, 5%) 8px);
+    background: radial-gradient(var.$button-radio-check-dot 8px, var.$button-radio-background-hover 8px);
   }
 
   &--radio:checked:active::before {
-    background: radial-gradient(lighten(#000000, 50%) 8px, darken(#f1f1f1, 8%) 8px);
+    background: radial-gradient(var.$button-radio-check-dot-active 8px, var.$button-radio-background-active 8px);
   }
 
   &--checkbox::before {
@@ -404,16 +398,16 @@
     width: 46px;
     height: 46px;
     display: block;
-    background-color: #f2f2f2;
+    background-color: var.$button-checkbox-background;
     border-radius: 4px;
   }
 
   &--checkbox:hover::before {
-    background-color: darken(#f2f2f2, 5%);
+    background-color: var.$button-checkbox-background-hover;
   }
 
   &--checkbox:active::before {
-    background-color: darken(#f2f2f2, 8%);
+    background-color:  var.$button-checkbox-background-active;
   }
 
   &--checkbox:checked::before {
@@ -421,11 +415,11 @@
   }
 
   &--checkbox:checked:hover::before {
-    background: darken(#f2f2f2, 5%) url("../img/icons/check.svg") no-repeat center;
+    background: var.$button-checkbox-background-hover url("../img/icons/check.svg") no-repeat center;
   }
 
   &--checkbox:checked:active::before {
-    background: darken(#f2f2f2, 8%) url("../img/icons/check.svg") no-repeat center;
+    background:  var.$button-checkbox-background-active url("../img/icons/check.svg") no-repeat center;
     opacity: 0.6;
   }
 }
@@ -435,9 +429,10 @@
   border: none;
   padding: 16px;
   min-height: 116px;
+  resize: none;
 
   &::placeholder {
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
 
     @include mixin.font-input;
     color: #000000;
@@ -501,7 +496,8 @@
     position: absolute;
     bottom: -26px;
     right: 0;
-    color: #ababab;
+    color: var.$secondary-text-color;
+    opacity: 0.6;
     font-weight: 400;
     font-size: 12px;
     line-height: 21px;
@@ -509,6 +505,7 @@
 
     @media (min-width: var.$tablet-width) {
       & {
+        opacity: 1;
         bottom: 13px;
         right: 0;
         font-size: 14px;

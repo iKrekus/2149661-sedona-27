@@ -1,0 +1,19 @@
+@use "mixins.scss" as mixin;
+@use "variables.scss" as var;
+
+.form-body {
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: var.$light-page-backround-color;
+
+  @media (min-width: var.$tablet-width) {
+    min-width: var.$tablet-width;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    & {
+      width: var.$desktop-width;
+      box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+    }
+  }
+}
