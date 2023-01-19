@@ -55,10 +55,6 @@
   text-align: center;
   padding: 0;
 
-  &:last-child {
-    border: none;
-  }
-
   &::after {
     content: "";
     width: 100%;
@@ -67,10 +63,10 @@
     position: absolute;
     bottom: -28px;
     left: 0;
+  }
 
-    &:last-child {
-      display: none;
-    }
+  &:last-child::after {
+    display: none;
   }
 
   @media (min-width: var.$tablet-width) {
